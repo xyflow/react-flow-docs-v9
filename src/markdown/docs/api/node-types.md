@@ -36,6 +36,10 @@ Your custom nodes are wrapped so that the basic functions like dragging or selec
 - `sourcePosition`: string
 - `targetPosition`: string
 
+### Styling
+
+When you create a new node type you also need to implement some styling. Your custom has no default styles.
+
 ### Prevent dragging
 
 If you have controls or other elements inside your custom node that should not drag the node you can add the class name `nodrag`.
