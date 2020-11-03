@@ -12,7 +12,7 @@ const targetHandleWithValidation = (
     type="target"
     position="left"
     isValidConnection={(connection) => connection.source === 'some-id'}
-    onConnect={params => console.log('handle onConnect', params)}
+    onConnect={(params) => console.log('handle onConnect', params)}
     style={{ background: '#fff' }}
   />
 );
@@ -36,6 +36,6 @@ The handle receives the additional class names `connecting` when the connection 
 
 ### Multiple Handles
 
-If you need multiple source or target handles you can achieve this by creating a custom node. Normally you just use the id of a node for the `source` or `target` of an edge. If you have multiple source or target handles you need to pass an id to these handles. These ids can be used by an edge with the `sourceHandle` and `targetHandle` options, so that you can connect a specific handle. If you have a node with an id = `1` and a handle with an id = `a` you can connect this handle by using the node `source=1` and the `sourceHandle=__a`.
+If you need multiple source or target handles you can achieve this by creating a custom node. Normally you just use the id of a node for the `source` or `target` of an edge. If you have multiple source or target handles you need to pass an id to these handles. These ids can be used by an edge with the `sourceHandle` and `targetHandle` options, so that you can connect a specific handle. If you have a node with an id = `1` and a handle with an id = `a` you can connect this handle by using the node `source=1` and the `sourceHandle=a`.
 
 You can find an example of how to implement a custom node with multiple handles in the [custom node example](https://github.com/wbkd/react-flow/blob/main/example/src/CustomNode/ColorSelectorNode.js#L18-L29).

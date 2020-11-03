@@ -156,13 +156,15 @@ export default () => {
       {
         id: 'e1',
         source: '1',
-        target: '3__a',
+        target: '3',
+        targetHandle: 'a',
         animated: true,
       },
       {
         id: 'e2',
         source: '2',
-        target: '3__b',
+        target: '3',
+        targetHandle: 'b',
         animated: true,
       },
     ];
