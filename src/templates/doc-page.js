@@ -63,7 +63,7 @@ const EditLink = styled.a`
 const EditButton = ({ slug }) => (
   <Box my={[4, 4, 5]}>
     <EditLink
-      href={`https://github.com/wbkd/react-flow/edit/main/website/src/markdown${slug}`}
+      href={`https://github.com/wbkd/react-flow-docs/edit/main/src/markdown${slug}`}
       target="_blank"
       rel="noopener noreferrer"
     >
