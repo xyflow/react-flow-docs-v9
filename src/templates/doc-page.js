@@ -80,14 +80,14 @@ function extendMenu(items, menuData) {
     }
 
     menuItem.slug =
-      menuData.find((m) => m.title === menuItem.title)?.slug || '/';
+      menuData.find((m) => (m.id || m.title) === menuItem.title)?.slug || '/';
   });
 }
 
 const DocPageTemplate = ({ data, pageContext }) => {
   const { content } = data;
   const { title } = content.frontmatter;
-
+  const slug = content.fileAbsolutePath.split('markdown')[1];
   const metaTags = {
     title: `React Flow - ${title} Docs`,
     description: content.excerpt,
@@ -96,8 +96,6 @@ const DocPageTemplate = ({ data, pageContext }) => {
   };
 
   extendMenu(docsMenu, pageContext.menu);
-
-  const slug = content.fileAbsolutePath.split('markdown')[1];
 
   return (
     <DocPage metaTags={metaTags} menu={docsMenu}>
@@ -121,6 +119,7 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
+        id
         title
       }
     }

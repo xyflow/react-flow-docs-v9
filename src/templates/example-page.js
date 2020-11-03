@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
 
 import ExamplePage from 'components/Page/Example';
 import { ReactFlowProvider } from 'react-flow-renderer';

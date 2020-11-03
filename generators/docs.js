@@ -18,6 +18,7 @@ const docPagesQuery = `
           }
           frontmatter {
             title
+            id
           }
         }
       }
@@ -28,7 +29,7 @@ const docPagesQuery = `
 const createDocPages = (createPage, docPages) => {
   const menu = docPages.map((page) => ({
     slug: page.node.fields.slug,
-    title: page.node.frontmatter.title,
+    ...page.node.frontmatter,
   }));
 
   docPages.forEach((page) => {
