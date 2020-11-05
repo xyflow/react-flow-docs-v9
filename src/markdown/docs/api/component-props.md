@@ -9,11 +9,13 @@ import ReactFlow from 'react-flow-renderer';
 ```
 
 ### Basic Props
-- `elements`: array of [nodes](/docs/api/nodes/) and [edges](/docs/api/edges/) *(required)*
+
+- `elements`: array of [nodes](/docs/api/nodes/) and [edges](/docs/api/edges/) _(required)_
 - `style`: css properties
 - `className`: additional class name
 
 ### Flow View
+
 - `minZoom`: default: `0.5`
 - `maxZoom`: default: `2`
 - `defaultZoom`: default: `1`
@@ -24,6 +26,7 @@ import ReactFlow from 'react-flow-renderer';
 - `translateExtent`: [default `[[-∞, -∞], [+∞, +∞]]`](https://github.com/d3/d3-zoom#zoom_translateExtent)
 
 ### Event Handlers
+
 - `onElementClick(event, element)`: called when user clicks node or edge
 - `onElementsRemove(elements)`: called when user removes node or edge
 - `onNodeDragStart(event, node)`: node drag start
@@ -50,6 +53,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onPaneScroll(event)`: called when user scrolls pane (only works when `zoomOnScroll` is set to `false)
 
 ### Interaction
+
 - `nodesDraggable`: default: `true`. This applies to all nodes. You can also change the behavior of a specific node with the `draggable` node option
 - `nodesConnectable`: default: `true`. This applies to all nodes. You can also change the behavior of a specific node with the `connectable` node option
 - `elementsSelectable`: default: `true`. This applies to all elements. You can also change the behavior of a specific node with the `selectable` node option
@@ -61,18 +65,22 @@ import ReactFlow from 'react-flow-renderer';
 - `paneMoveable`: default: `true` - If set to `false`, panning and zooming is disabled
 
 ### Element Customization
+
 - `nodeTypes`: object with [node types](/docs/api/node-types/)
 - `edgeTypes`: object with [edge types](/docs/api/edge-types/)
 - `arrowHeadColor`: default: `#b1b1b7`
 
 ### Connection Line Options
+
 - `connectionLineType`: connection line type = `default` (bezier), `straight`, `step`, `smoothstep`
 - `connectionLineStyle`: connection style as svg attributes
 - `connectionLineComponent`: [custom connection line component](/examples/custom-connectionline/)
 
 ### Keys
+
 - `deleteKeyCode`: default: `8` (backspace)
-- `selectionKeyCode`: default: `16` (shift)
+- `selectionKeyCode`: default: `16` (shift) - While pressing the selectionKeyCode and dragging the mouse you can create a selection for multiple nodes and edges
+- `multiSelectionKeyCode`: default `91` (cmd) - While pressing the multiSelectionKeyCode you can select multiple nodes and edges with a click
 
 **Typescript:** The interface of the ReactFlow Prop Types are exported as `ReactFlowProps`. You can use it in your code as follows:
 
