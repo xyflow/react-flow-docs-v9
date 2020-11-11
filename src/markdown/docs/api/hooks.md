@@ -2,7 +2,7 @@
 title: Hooks
 ---
 
-<InfoBox title="Note" text="You have to use the ReactFlowProvider if you want to use hooks from react-flow"/>
+<InfoBox title="Note" text="The following hooks are available from version 8.0.0 upwards. You have to use the ReactFlowProvider if you want to use hooks from react-flow."/>
 
 For modifying or reading the state of the graph, you can use the following hooks:
 
