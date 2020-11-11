@@ -22,26 +22,8 @@ export default () => {
 
 The `useZoomPanHelper` hook returns an object containing the following functions:
 
-`fitView`
-
-Fits the view port so that all nodes are visible
-
-`fitView = ({ padding }): void`
-
-`zoomIn`
-
-Zoom in
-
-`zoomIn = (): void`
-
-`zoomOut`
-
-Zoom out
-
-`zoomOut = (): void`
-
-`zoomTo`
-
-Zooms to the specified zoom level
-
-`zoomTo = (zoomLevel: number): void`
+- `fitView = ({ padding }): void`
+- `zoomIn = (): void`
+- `zoomOut = (): void`
+- `zoomTo = (zoomLevel: number): void`
+- `initialized: boolean`
