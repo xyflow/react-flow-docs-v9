@@ -23,5 +23,9 @@ const FlowWithControls = () => (
 - `showInteractive`: boolean - default: true
 - `style`: css properties
 - `className`: additional class name
+- `onZoomIn`: callback function that gets triggered when the zoom in button is pressed
+- `onZoomOut`: callback function that gets triggered when the zoom out button is pressed
+- `onFitView`: callback function that gets triggered when the fit-to-view button is pressed
+- `onInteractiveChange`: callback function that gets triggered when the lock button is pressed - passes the new value
 
 **Typescript:** The interface of the Controls Prop Types are exported as `ControlProps`.
