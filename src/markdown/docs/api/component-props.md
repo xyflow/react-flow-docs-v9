@@ -22,7 +22,7 @@ import ReactFlow from 'react-flow-renderer';
 - `defaultPosition`: default: `[0, 0]`
 - `snapToGrid`: default: `false`
 - `snapGrid`: [x, y] array - default: `[15, 15]`
-- `onlyRenderVisibleNodes`: default: `true`
+- `onlyRenderVisibleElements`: default: `true`
 - `translateExtent`: [default `[[-∞, -∞], [+∞, +∞]]`](https://github.com/d3/d3-zoom#zoom_translateExtent)
 
 ### Event Handlers
@@ -60,6 +60,7 @@ import ReactFlow from 'react-flow-renderer';
 - `zoomOnScroll`: default: `true`. Zoom the graph in and out using the mousewheel or trackpad
 - `panOnScroll`: default: `false`. Move the graph while keeping the zoomlevel using mousewheel or trackpad. Overwrites `zoomOnScroll`.
 - `panOnScrollSpeed`: default: `0.5`. Controls how fast the canvas is moved while using the mousewheel. Only has an effect if `panOnScroll` is enabled.
+- `panOnScrollMode`: default: `'free'`. Possible values are `'free'` (all directions), `'vertical'` (only vertical) or `'horizontal'` (only horizontal)
 - `zoomOnDoubleClick`: default: `true`
 - `selectNodesOnDrag`: default: `true`
 - `paneMoveable`: default: `true` - If set to `false`, panning and zooming is disabled
@@ -78,9 +79,9 @@ import ReactFlow from 'react-flow-renderer';
 
 ### Keys
 
-- `deleteKeyCode`: default: `8` (backspace)
-- `selectionKeyCode`: default: `16` (shift) - While pressing the selectionKeyCode and dragging the mouse you can create a selection for multiple nodes and edges
-- `multiSelectionKeyCode`: default `91` (cmd) - While pressing the multiSelectionKeyCode you can select multiple nodes and edges with a click
+- `deleteKeyCode`: `number` | `string` default: `Backspace`
+- `selectionKeyCode`: `number` | `string` default: `Shift` - While pressing the selectionKeyCode and dragging the mouse you can create a selection for multiple nodes and edges
+- `multiSelectionKeyCode`: `number` | `string` default `Meta` - While pressing the multiSelectionKeyCode you can select multiple nodes and edges with a click
 
 **Typescript:** The interface of the ReactFlow Prop Types are exported as `ReactFlowProps`. You can use it in your code as follows:
 
