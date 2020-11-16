@@ -11,12 +11,12 @@ If you need to access the internal state you can use the `useStoreState` hook in
 import ReactFlow, { useStoreState } from 'react-flow-renderer';
 
 const NodesDebugger = () => {
-  const nodes = useStoreState(state => state.nodes);
+  const nodes = useStoreState((state) => state.nodes);
 
   console.log(nodes);
 
   return null;
-}
+};
 
 const Flow = () => (
   <ReactFlow elements={elements}>
@@ -27,18 +27,20 @@ const Flow = () => (
 
 ### Internal actions
 
+<InfoBox title="Attention" text="The internal actions of React Flow might change in the future and should not be used if it is not necessary."/>
+
 You will not need this in most cases but you can also use the internal actions that are defined in the [store](https://github.com/wbkd/react-flow/blob/main/src/store/index.ts):
 
 ```jsx
 import React, { useEffect } from 'react';
 import { useStoreActions } from 'react-flow-renderer'
 
-const TransformUpdater = ({ x, y, zoom }) => {
-  const setTransform = useStoreActions(actions => actions.setInitTransform);
+const MinZoom = () => {
+  const setMinZoom = useStoreActions(actions => actions.setMinZoom);
 
   useEffect(() => {
-    setTransform({ x, y, k: zoom })
-  }, [x, y, zoom]);
+    setMinZoom(6);
+  }, []);
 
   return null;
 });
