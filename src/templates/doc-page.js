@@ -34,7 +34,7 @@ const docsMenu = [
       },
       { title: 'Instance' },
       { title: 'Internal State and Actions' },
-      // { title: 'Hooks' },
+      { title: 'Hooks' },
       {
         group: 'Components',
         items: [
