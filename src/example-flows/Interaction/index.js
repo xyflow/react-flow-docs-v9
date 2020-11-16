@@ -51,6 +51,7 @@ const InteractionFlow = () => {
   const [isConnectable, setIsConnectable] = useState(false);
   const [zoomOnScroll, setZoomOnScroll] = useState(false);
   const [panOnScroll, setPanOnScroll] = useState(false);
+  const [panOnScrollMode, setPanOnScrollMode] = useState('free');
   const [zoomOnDoubleClick, setZoomOnDoubleClick] = useState(false);
   const [paneMoveable, setPaneMoveable] = useState(true);
   const [captureZoomClick, setCaptureZoomClick] = useState(false);
@@ -65,6 +66,7 @@ const InteractionFlow = () => {
       nodesDraggable={isDraggable}
       zoomOnScroll={zoomOnScroll}
       panOnScroll={panOnScroll}
+      panOnScrollMode={panOnScrollMode}
       zoomOnDoubleClick={zoomOnDoubleClick}
       onConnect={onConnect}
       onElementClick={captureElementClick ? onElementClick : undefined}
@@ -79,10 +81,18 @@ const InteractionFlow = () => {
       <MiniMap />
       <Controls />
 
-      <div style={{ position: 'absolute', left: 10, top: 10, zIndex: 4 }}>
+      <div
+        style={{
+          position: 'absolute',
+          left: 10,
+          top: 10,
+          zIndex: 4,
+          textTransform: 'none',
+        }}
+      >
         <div>
           <label htmlFor="draggable">
-            draggable
+            nodesDraggable
             <input
               id="draggable"
               type="checkbox"
@@ -94,7 +104,7 @@ const InteractionFlow = () => {
         </div>
         <div>
           <label htmlFor="connectable">
-            connectable
+            nodesConnectable
             <input
               id="connectable"
               type="checkbox"
@@ -106,7 +116,7 @@ const InteractionFlow = () => {
         </div>
         <div>
           <label htmlFor="selectable">
-            selectable
+            elementsSelectable
             <input
               id="selectable"
               type="checkbox"
@@ -118,7 +128,7 @@ const InteractionFlow = () => {
         </div>
         <div>
           <label htmlFor="zoomonscroll">
-            zoom on scroll
+            zoomOnScroll
             <input
               id="zoomonscroll"
               type="checkbox"
@@ -128,9 +138,9 @@ const InteractionFlow = () => {
             />
           </label>
         </div>
-        {/* <div>
+        <div>
           <label htmlFor="panonscroll">
-            pan on scroll
+            panOnScroll
             <input
               id="panonscroll"
               type="checkbox"
@@ -139,10 +149,25 @@ const InteractionFlow = () => {
               className="react-flow__panonscroll"
             />
           </label>
-        </div> */}
+        </div>
+        <div>
+          <label htmlFor="panonscrollmode">
+            panOnScrollMode
+            <select
+              id="panonscrollmode"
+              value={panOnScrollMode}
+              onChange={(event) => setPanOnScrollMode(event.target.value)}
+              className="react-flow__panonscrollmode"
+            >
+              <option value="free">free</option>
+              <option value="horizontal">horizontal</option>
+              <option value="vertical">vertical</option>
+            </select>
+          </label>
+        </div>
         <div>
           <label htmlFor="zoomondbl">
-            zoom on double click
+            zoomOnDoubleClick
             <input
               id="zoomondbl"
               type="checkbox"
@@ -154,7 +179,7 @@ const InteractionFlow = () => {
         </div>
         <div>
           <label htmlFor="panemoveable">
-            pane moveable
+            paneMoveable
             <input
               id="panemoveable"
               type="checkbox"
@@ -166,7 +191,7 @@ const InteractionFlow = () => {
         </div>
         <div>
           <label htmlFor="capturezoompaneclick">
-            capture zoom pane click
+            capture onPaneClick
             <input
               id="capturezoompaneclick"
               type="checkbox"
@@ -178,7 +203,7 @@ const InteractionFlow = () => {
         </div>
         <div>
           <label htmlFor="capturezoompanescroll">
-            capture zoom pane scroll
+            capture onPaneScroll
             <input
               id="capturezoompanescroll"
               type="checkbox"
@@ -190,7 +215,7 @@ const InteractionFlow = () => {
         </div>
         <div>
           <label htmlFor="captureelementclick">
-            capture element click
+            capture onElementClick
             <input
               id="captureelementclick"
               type="checkbox"
