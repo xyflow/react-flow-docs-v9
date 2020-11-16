@@ -51,6 +51,7 @@ const InteractionFlow = () => {
   const [isConnectable, setIsConnectable] = useState(false);
   const [zoomOnScroll, setZoomOnScroll] = useState(false);
   const [panOnScroll, setPanOnScroll] = useState(false);
+  const [panOnScrollMode, setPanOnScrollMode] = useState('free');
   const [zoomOnDoubleClick, setZoomOnDoubleClick] = useState(false);
   const [paneMoveable, setPaneMoveable] = useState(true);
   const [captureZoomClick, setCaptureZoomClick] = useState(false);
@@ -65,6 +66,7 @@ const InteractionFlow = () => {
       nodesDraggable={isDraggable}
       zoomOnScroll={zoomOnScroll}
       panOnScroll={panOnScroll}
+      panOnScrollMode={panOnScrollMode}
       zoomOnDoubleClick={zoomOnDoubleClick}
       onConnect={onConnect}
       onElementClick={captureElementClick ? onElementClick : undefined}
@@ -79,10 +81,17 @@ const InteractionFlow = () => {
       <MiniMap />
       <Controls />
 
-      <div style={{ position: 'absolute', left: 10, top: 10, zIndex: 4 }}>
+      <div
+        style={{
+          position: 'absolute',
+          left: 10,
+          top: 10,
+          zIndex: 4,
+          textTransform: 'none',
+        }}
+      >
         <div>
           <label htmlFor="draggable">
-            draggable
             <input
               id="draggable"
               type="checkbox"
@@ -90,11 +99,11 @@ const InteractionFlow = () => {
               onChange={(event) => setIsDraggable(event.target.checked)}
               className="react-flow__draggable"
             />
+            nodesDraggable
           </label>
         </div>
         <div>
           <label htmlFor="connectable">
-            connectable
             <input
               id="connectable"
               type="checkbox"
@@ -102,11 +111,11 @@ const InteractionFlow = () => {
               onChange={(event) => setIsConnectable(event.target.checked)}
               className="react-flow__connectable"
             />
+            nodesConnectable
           </label>
         </div>
         <div>
           <label htmlFor="selectable">
-            selectable
             <input
               id="selectable"
               type="checkbox"
@@ -114,11 +123,11 @@ const InteractionFlow = () => {
               onChange={(event) => setIsSelectable(event.target.checked)}
               className="react-flow__selectable"
             />
+            elementsSelectable
           </label>
         </div>
         <div>
           <label htmlFor="zoomonscroll">
-            zoom on scroll
             <input
               id="zoomonscroll"
               type="checkbox"
@@ -126,11 +135,11 @@ const InteractionFlow = () => {
               onChange={(event) => setZoomOnScroll(event.target.checked)}
               className="react-flow__zoomonscroll"
             />
+            zoomOnScroll
           </label>
         </div>
-        {/* <div>
+        <div>
           <label htmlFor="panonscroll">
-            pan on scroll
             <input
               id="panonscroll"
               type="checkbox"
@@ -138,11 +147,26 @@ const InteractionFlow = () => {
               onChange={(event) => setPanOnScroll(event.target.checked)}
               className="react-flow__panonscroll"
             />
+            panOnScroll
           </label>
-        </div> */}
+        </div>
+        <div>
+          <label htmlFor="panonscrollmode">
+            <select
+              id="panonscrollmode"
+              value={panOnScrollMode}
+              onChange={(event) => setPanOnScrollMode(event.target.value)}
+              className="react-flow__panonscrollmode"
+            >
+              <option value="free">free</option>
+              <option value="horizontal">horizontal</option>
+              <option value="vertical">vertical</option>
+            </select>
+            panOnScrollMode
+          </label>
+        </div>
         <div>
           <label htmlFor="zoomondbl">
-            zoom on double click
             <input
               id="zoomondbl"
               type="checkbox"
@@ -150,11 +174,11 @@ const InteractionFlow = () => {
               onChange={(event) => setZoomOnDoubleClick(event.target.checked)}
               className="react-flow__zoomondbl"
             />
+            zoomOnDoubleClick
           </label>
         </div>
         <div>
           <label htmlFor="panemoveable">
-            pane moveable
             <input
               id="panemoveable"
               type="checkbox"
@@ -162,11 +186,11 @@ const InteractionFlow = () => {
               onChange={(event) => setPaneMoveable(event.target.checked)}
               className="react-flow__panemoveable"
             />
+            paneMoveable
           </label>
         </div>
         <div>
           <label htmlFor="capturezoompaneclick">
-            capture zoom pane click
             <input
               id="capturezoompaneclick"
               type="checkbox"
@@ -174,11 +198,11 @@ const InteractionFlow = () => {
               onChange={(event) => setCaptureZoomClick(event.target.checked)}
               className="react-flow__capturezoompaneclick"
             />
+            capture onPaneClick
           </label>
         </div>
         <div>
           <label htmlFor="capturezoompanescroll">
-            capture zoom pane scroll
             <input
               id="capturezoompanescroll"
               type="checkbox"
@@ -186,11 +210,11 @@ const InteractionFlow = () => {
               onChange={(event) => setCaptureZoomScroll(event.target.checked)}
               className="react-flow__capturezoompanescroll"
             />
+            capture onPaneScroll
           </label>
         </div>
         <div>
           <label htmlFor="captureelementclick">
-            capture element click
             <input
               id="captureelementclick"
               type="checkbox"
@@ -198,6 +222,7 @@ const InteractionFlow = () => {
               onChange={(event) => setCaptureElementClick(event.target.checked)}
               className="react-flow__captureelementclick"
             />
+            capture onElementClick
           </label>
         </div>
       </div>

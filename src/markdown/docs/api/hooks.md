@@ -2,7 +2,7 @@
 title: Hooks
 ---
 
-<InfoBox title="Note" text="The following hooks are available from version 8.0.0 upwards. You have to use the ReactFlowProvider if you want to use hooks from react-flow."/>
+<InfoBox title="Note" text="The following hooks are available from version 8.0.0 upwards. You have to use the ReactFlowProvider if you want to use these hooks."/>
 
 For modifying or reading the state of the graph, you can use the following hooks:
 
@@ -26,4 +26,5 @@ The `useZoomPanHelper` hook returns an object containing the following functions
 - `zoomIn = (): void`
 - `zoomOut = (): void`
 - `zoomTo = (zoomLevel: number): void`
+- `transform: (_: FlowTransform): void`
 - `initialized: boolean`
