@@ -70,7 +70,7 @@ import ReactFlow from 'react-flow-renderer';
 - `nodeTypes`: object with [node types](/docs/api/node-types/)
 - `edgeTypes`: object with [edge types](/docs/api/edge-types/)
 - `arrowHeadColor`: default: `#b1b1b7`
-- `markerEndId`: The passed id gets used as a marker end id of the arrow
+- `markerEndId`: Gets used as the marker-end attribute of the edges
 
 ### Connection Line Options
 
