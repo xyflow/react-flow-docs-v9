@@ -8,7 +8,8 @@ For modifying or reading the state of the graph, you can use the following hooks
 
 ### useZoomPanHelper
 
-This hook can be used to modify the viewport of the react flow graph. Example:
+This hook can only be used when your application is wrapped with a [`ReactFlowProvider`](/docs/api/components/provider/).
+It can be used to modify the viewport of the react flow graph. Example:
 
 ```javascript
 import { useZoomPanHelper } from 'react-flow';
