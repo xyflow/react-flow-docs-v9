@@ -5,7 +5,12 @@ title: Helper Functions
 If you want to remove a node or connect two nodes with each other you need to pass a function to `onElementsRemove` and `onConnect`. In order to simplify this process there are some helper functions you can use:
 
 ```javascript
-import ReactFlow, { isNode, isEdge, removeElements, addEdge } from 'react-flow-renderer';
+import ReactFlow, {
+  isNode,
+  isEdge,
+  removeElements,
+  addEdge,
+} from 'react-flow-renderer';
 ```
 
 ### `isEdge`
@@ -31,6 +36,12 @@ Returns an array of elements without the ones from `elementsToRemove`. It also r
 Returns an array with elements with the added edge.
 
 `addEdge = (edgeParams: Edge, elements: Elements): Elements`
+
+### `updateEdge`
+
+Can be used as a helper for `onEdgeUpdate`. Returns the elements with the updated edge.
+
+`updateEdge = (oldEdge: Edge, newConnection: Connection, elements: Elements)`
 
 ### `getOutgoers`
 

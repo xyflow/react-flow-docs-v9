@@ -15,6 +15,11 @@
     "source": "Edges"
   },
   {
+    "title": "Updatable Edge",
+    "slug": "examples/updatable-edge/",
+    "source": "UpdatableEdge"
+  },
+  {
     "title": "Horizontal",
     "slug": "examples/horizontal/",
     "source": "Horizontal"

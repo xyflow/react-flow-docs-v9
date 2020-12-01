@@ -39,6 +39,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onConnectStart(event, { nodeId, handleType })`: called when user starts to drag connection line
 - `onConnectStop(event)`: called when user stops to drag connection line
 - `onConnectEnd(event)`: called after user stops or connects nodes
+- `onEdgeUpdate(oldEdge, newConnection)`: called when the end of an edge gets dragged to another source or target
 - `onLoad(reactFlowInstance)`: called after flow is initialized
 - `onMove(flowTransform)`: called when user is panning or zooming
 - `onMoveStart(flowTransform)`: called when user starts panning or zooming
@@ -64,6 +65,7 @@ import ReactFlow from 'react-flow-renderer';
 - `zoomOnDoubleClick`: default: `true`
 - `selectNodesOnDrag`: default: `true`
 - `paneMoveable`: default: `true` - If set to `false`, panning and zooming is disabled
+- `connectionMode`: default: `'strict'`. Possible values are `'strict'` (only source to target connections are possible) or `'loose'` (source to source and target to target connections are allowed)
 
 ### Element Customization
 
