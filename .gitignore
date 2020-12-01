@@ -7,3 +7,5 @@ public
 yarn.lock
 *.log
 .env
+.yalc
+yalc.lock

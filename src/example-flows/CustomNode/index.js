@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import ReactFlow, {
   isEdge,
@@ -12,10 +12,6 @@ import ColorSelectorNode from './ColorSelectorNode';
 
 import './index.css';
 
-const onLoad = (reactFlowInstance) => {
-  console.log('flow loaded:', reactFlowInstance);
-  setTimeout(() => reactFlowInstance.fitView(), 1);
-};
 const onNodeDragStop = (event, node) => console.log('drag stop', node);
 const onElementClick = (event, element) => console.log('click', element);
 
@@ -28,6 +24,7 @@ const nodeTypes = {
 };
 
 const CustomNodeFlow = () => {
+  const [reactflowInstance, setReactflowInstance] = useState(null);
   const [elements, setElements] = useState([]);
   const [bgColor, setBgColor] = useState(initBgColor);
 
@@ -110,12 +107,34 @@ const CustomNodeFlow = () => {
     ]);
   }, []);
 
-  const onElementsRemove = (elementsToRemove) =>
-    setElements((els) => removeElements(elementsToRemove, els));
-  const onConnect = (params) =>
-    setElements((els) =>
-      addEdge({ ...params, animated: true, style: { stroke: '#fff' } }, els)
-    );
+  useEffect(() => {
+    if (reactflowInstance && elements.length > 0) {
+      reactflowInstance.fitView();
+    }
+  }, [reactflowInstance, elements.length]);
+
+  const onElementsRemove = useCallback(
+    (elementsToRemove) =>
+      setElements((els) => removeElements(elementsToRemove, els)),
+    []
+  );
+  const onConnect = useCallback(
+    (params) =>
+      setElements((els) =>
+        addEdge({ ...params, animated: true, style: { stroke: '#fff' } }, els)
+      ),
+    []
+  );
+
+  const onLoad = useCallback(
+    (rfi) => {
+      if (!reactflowInstance) {
+        setReactflowInstance(rfi);
+        console.log('flow loaded:', rfi);
+      }
+    },
+    [reactflowInstance]
+  );
 
   return (
     <ReactFlow
