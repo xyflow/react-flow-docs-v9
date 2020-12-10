@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css, jsx } from '@emotion/react';
 
 export const breakpoints = {
   s: 460,

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { useTheme } from 'emotion-theming';
+import { useTheme, jsx } from '@emotion/react';
 
 import WbkdLogoWhite from 'assets/images/logo-white.svg';
 import WbkdLogoBlack from 'assets/images/logo.svg';

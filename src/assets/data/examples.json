@@ -10,6 +10,11 @@
     "source": "CustomNode"
   },
   {
+    "title": "Update Node",
+    "slug": "examples/update-node/",
+    "source": "UpdateNode"
+  },
+  {
     "title": "Edges",
     "slug": "examples/edges/",
     "source": "Edges"

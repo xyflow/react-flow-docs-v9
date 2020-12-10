@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider, jsx } from '@emotion/react';
 import { Flex, Box } from 'reflexbox';
 
 import Header from 'components/Header';

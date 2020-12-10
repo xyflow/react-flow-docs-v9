@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { Box } from 'reflexbox';
 
+import theme from 'themes/index';
+
 import CenterContent from 'components/CenterContent';
 
 export default ({
@@ -15,7 +17,12 @@ export default ({
   const wrapperProps = centered ? { big: big } : {};
 
   return (
-    <Box id={id} bg={bg} py={[6, 7]} {...rest}>
+    <Box
+      id={id}
+      bg={theme.light.colors[bg] ? theme.light.colors[bg] : bg}
+      py={[4, 5]}
+      {...rest}
+    >
       <WrapperComponent {...wrapperProps}>{children}</WrapperComponent>
     </Box>
   );
