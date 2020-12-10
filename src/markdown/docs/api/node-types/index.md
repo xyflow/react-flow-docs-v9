@@ -50,7 +50,7 @@ If you have controls or other elements inside your custom node that should not d
 
 ## Basic Implemantation
 
-A basic implementation of a cusotm node could look like this:
+A basic implementation of a custom node could look like this:
 
 ```jsx
 import React from 'react';
