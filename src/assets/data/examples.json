@@ -39,15 +39,21 @@
     "slug": "examples/provider/",
     "source": "Provider"
   },
-  {
-    "title": "Stress",
-    "slug": "examples/stress/",
-    "source": "Stress"
-  },
+
   {
     "title": "Validation",
     "slug": "examples/validation/",
     "source": "Validation"
+  },
+  {
+    "title": "Drag and Drop",
+    "slug": "examples/drag-and-drop/",
+    "source": "DragNDrop"
+  },
+  {
+    "title": "Stress",
+    "slug": "examples/stress/",
+    "source": "Stress"
   },
   {
     "title": "Custom Connectionline",
