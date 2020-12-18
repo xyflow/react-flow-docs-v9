@@ -63,5 +63,10 @@
     "title": "Hidden",
     "slug": "examples/hidden/",
     "source": "Hidden"
+  },
+  {
+    "title": "DnD New Nodes",
+    "slug": "examples/drop-nodes/",
+    "source": "DropNodes"
   }
 ]
