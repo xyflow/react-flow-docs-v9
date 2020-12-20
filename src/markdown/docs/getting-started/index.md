@@ -7,11 +7,13 @@ Before you can start to use React Flow you need to install `react-flow-renderer`
 ## Installation
 
 **npm:**
+
 ```bash
 npm install react-flow-renderer
 ```
 
 **yarn:**
+
 ```bash
 yarn add react-flow-renderer
 ```
@@ -56,7 +58,7 @@ export default () => (
 );
 ```
 
-import Flow from './index';
+import Flow from './Basic';
 
 <Flow />
 
@@ -65,7 +67,6 @@ import Flow from './index';
 ## Basic Functionality
 
 We don’t do any state updates besides the positions. This means that you need to pass the functions to remove an element or connect nodes by yourself. You can implement your own ones or use the [helper functions](/docs/api/helper-functions/) that come with the library. Here you see an example of how to use the heler functions `removeElements` and `addEdge`.
-
 
 ```jsx
 import React, { useState } from 'react';
@@ -101,7 +102,7 @@ export default () => {
       />
     </div>
   );
-}
+};
 ```
 
 In this example you can connect nodes and remove selected nodes and edges with the backspace key.
