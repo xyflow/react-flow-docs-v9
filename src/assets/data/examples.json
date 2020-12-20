@@ -39,7 +39,6 @@
     "slug": "examples/provider/",
     "source": "Provider"
   },
-
   {
     "title": "Validation",
     "slug": "examples/validation/",
@@ -49,6 +48,11 @@
     "title": "Drag and Drop",
     "slug": "examples/drag-and-drop/",
     "source": "DragNDrop"
+  },
+  {
+    "title": "Layouting",
+    "slug": "examples/layouting/",
+    "source": "Layouting"
   },
   {
     "title": "Stress",
