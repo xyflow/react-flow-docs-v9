@@ -23,9 +23,13 @@ export default () => {
 
 The `useZoomPanHelper` hook returns an object containing the following functions:
 
-- `fitView = ({ padding }): void`
-- `zoomIn = (): void`
-- `zoomOut = (): void`
-- `zoomTo = (zoomLevel: number): void`
-- `transform: (_: FlowTransform): void`
-- `initialized: boolean`
+- `fitView = ({ padding }): void` - fits the view to the nodes on the pane
+- `zoomIn = (): void` - zooms in
+- `zoomOut = (): void` - zooms out
+- `zoomTo = (zoomLevel: number): void` - zooms to passed zoom level
+- `transform: (transform: FlowTransform): void` - sets the transform of the pane
+- `setCenter: (x: number, y: number, zoom?: number): void` - sets the center to the passed params. If no zoom is passed the maxZoom is used
+- `fitBounds: (bounds: Rect, padding?: number): void` - fits the pane to the passed bounds (object with width x, y, width and height: `{ x: 0, y: 0, width: 100, height: 100 }`)
+- `initialized: boolean` - `true` when hook is initialized
+
+You can find an example of how to use it here: [useZoomPanHelper example](/examples/use-use-pan-helper/)

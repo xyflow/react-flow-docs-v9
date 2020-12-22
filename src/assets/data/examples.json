@@ -45,6 +45,11 @@
     "source": "Validation"
   },
   {
+    "title": "useZoomPanHelper",
+    "slug": "examples/use-zoom-pan-helper-hook/",
+    "source": "ZoomPanHelper"
+  },
+  {
     "title": "Drag and Drop",
     "slug": "examples/drag-and-drop/",
     "source": "DragNDrop"
