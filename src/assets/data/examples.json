@@ -55,6 +55,11 @@
     "source": "Layouting"
   },
   {
+    "title": "Save and Restore",
+    "slug": "examples/save-and-restore/",
+    "source": "SaveRestore"
+  },
+  {
     "title": "Stress",
     "slug": "examples/stress/",
     "source": "Stress"
