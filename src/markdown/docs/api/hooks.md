@@ -32,4 +32,4 @@ The `useZoomPanHelper` hook returns an object containing the following functions
 - `fitBounds: (bounds: Rect, padding?: number): void` - fits the pane to the passed bounds (object with width x, y, width and height: `{ x: 0, y: 0, width: 100, height: 100 }`)
 - `initialized: boolean` - `true` when hook is initialized
 
-You can find an example of how to use it here: [useZoomPanHelper example](/examples/use-use-pan-helper/)
+You can find an example of how to use it here: [useZoomPanHelper example](/examples/use-zoom-pan-helper-hook/)
