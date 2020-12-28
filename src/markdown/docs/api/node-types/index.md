@@ -58,7 +58,7 @@ A basic implementation of a custom node could look like this:
 
 ```jsx
 import React from 'react';
-import ReactFlow from 'react-flow-renderer';
+import ReactFlow, { Handle } from 'react-flow-renderer';
 
 const elements = [
   {
