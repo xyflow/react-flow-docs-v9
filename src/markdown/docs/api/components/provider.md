@@ -2,12 +2,12 @@
 title: Provider
 ---
 
-If you need access to the internal state and action of React Flow outside of the `ReactFlow` component you can wrap it with the `ReactFlowProvider` component:
+If you have **multiple flows** on a page or if you need **access to the internal state and actions** of React Flow outside of the `ReactFlow` component you need to wrap it with the `ReactFlowProvider` component:
 
 ```jsx
 import ReactFlow, { ReactFlowProvider } from 'react-flow-renderer';
 
-const FlowWithOwnProvider = () => (
+const FlowWithProvider = () => (
   <ReactFlowProvider>
     <ReactFlow
       elements={elements}
