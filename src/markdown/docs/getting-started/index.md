@@ -66,7 +66,7 @@ import Flow from './Basic';
 
 ## Basic Functionality
 
-We don’t do any state updates besides the positions. This means that you need to pass the functions to remove an element or connect nodes by yourself. You can implement your own ones or use the [helper functions](/docs/api/helper-functions/) that come with the library. Here you see an example of how to use the heler functions `removeElements` and `addEdge`.
+We don’t do any state updates besides the positions. This means that you need to pass the functions to remove an element or connect nodes by yourself. You can implement your own ones or use the [helper functions](/docs/api/helper-functions/) that come with the library. Here you see an example of how to use the helper functions `removeElements` and `addEdge`.
 
 ```jsx
 import React, { useState } from 'react';
