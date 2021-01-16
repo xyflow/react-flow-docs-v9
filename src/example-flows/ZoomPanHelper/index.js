@@ -41,7 +41,7 @@ const ProviderFlow = () => {
             elements={elements}
             onConnect={onConnect}
             onElementsRemove={onElementsRemove}
-          ></ReactFlow>
+          />
         </div>
         <Sidebar />
       </ReactFlowProvider>

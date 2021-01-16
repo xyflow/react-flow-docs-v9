@@ -2,7 +2,7 @@
 title: Edge Utils
 ---
 
-There are several utils that help you to create a custom edge. They are used in the [custom edge](/examples/custom-edge) example.
+There are several utils that help you to create a custom edge. Some are used in the [edges example](/examples/edges).
 
 ### `getBezierPath`
 
