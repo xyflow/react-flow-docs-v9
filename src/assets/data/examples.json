@@ -83,5 +83,10 @@
     "title": "Hidden",
     "slug": "examples/hidden/",
     "source": "Hidden"
+  },
+  {
+    "title": "Smooth Transition",
+    "slug": "exmaples/smooth-transition",
+    "source": "SmoothTransition"
   }
 ]
