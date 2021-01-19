@@ -26,13 +26,24 @@ const SmoothTranstion = () => {
     setRfInstance(instance);
   };
 
-  const handleZoom = (ratio) => () => {
+  const handleZoom = ratio => () => {
     const zoom = rfInstance.toObject().zoom;
     new Tween({ zoom: zoom })
       .to({ zoom: zoom * ratio }, TRANSITION_TIME)
       .easing(Easing.Quadratic.Out)
       .on('update', ({ zoom }) => {
         rfInstance.zoomTo(zoom)
+      })
+      .start();
+  };
+
+  const handleTransform = transform => () => {
+    const { position: [x, y], zoom } = rfInstance.toObject();
+    new Tween({ zoom: zoom, x: x, y: y })
+      .to({ x: transform.x, y: transform.y, zoom: transform.zoom }, TRANSITION_TIME)
+      .easing(Easing.Quadratic.Out)
+      .on('update', ({ x, y, zoom }) => {
+        rfInstance.setTransform({ x, y, zoom })
       })
       .start();
   };
@@ -47,8 +58,9 @@ const SmoothTranstion = () => {
         <div className="controls">
           <button onClick={handleZoom(1.2)}>zoom in</button>
           <button onClick={handleZoom(1 / 1.2)}>zoom out</button>
+          <button onClick={handleTransform({ zoom: 1, x: 0, y: 0 })}>pan to center(0,0,1)</button>
         </div>
-        <Background color="#aaa" gap={16} />
+          <Background color="#aaa" gap={16} />
       </ReactFlow >
     </div>
   );
