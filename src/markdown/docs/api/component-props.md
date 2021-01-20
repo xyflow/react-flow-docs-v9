@@ -85,6 +85,7 @@ import ReactFlow from 'react-flow-renderer';
 - `deleteKeyCode`: `number` | `string` default: `Backspace`
 - `selectionKeyCode`: `number` | `string` default: `Shift` - While pressing the selectionKeyCode and dragging the mouse you can create a selection for multiple nodes and edges
 - `multiSelectionKeyCode`: `number` | `string` default `Meta` - While pressing the multiSelectionKeyCode you can select multiple nodes and edges with a click
+- `zoomActivationKeyCode`: `number` | `string` default `Meta` - While pressing the zoomActivationKeyCode you can zoom even if `panOnScroll=true` or `zoomOnScroll=false`.
 
 **Typescript:** The interface of the ReactFlow Prop Types are exported as `ReactFlowProps`. You can use it in your code as follows:
 
