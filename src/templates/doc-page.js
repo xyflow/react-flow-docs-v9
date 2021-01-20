@@ -11,6 +11,7 @@ import Icon from 'components/Icon';
 const docsMenu = [
   { title: 'Introduction' },
   { title: 'Getting Started' },
+  { title: 'Theming' },
   {
     group: 'API Reference',
     items: [
