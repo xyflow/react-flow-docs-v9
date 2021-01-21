@@ -4,6 +4,8 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const docsGenerator = require('./generators/docs');
 const exampleGenerator = require('./generators/examples');
 
+const pkg = require('./package.json');
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -27,7 +29,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
+exports.onCreateWebpackConfig = ({ actions, plugins }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -38,5 +40,12 @@ exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
     devServer: {
       host: '0.0.0.0',
     },
+    plugins: [
+      plugins.define({
+        __REACT_FLOW_VERSION__: JSON.stringify(
+          pkg.dependencies['react-flow-renderer'].replace('^', '')
+        ),
+      }),
+    ],
   });
 };

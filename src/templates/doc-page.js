@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Box } from 'reflexbox';
+import { Flex, Box } from 'reflexbox';
 import styled from '@emotion/styled';
 
 import DocPage from 'components/Page/Doc';
@@ -63,7 +63,7 @@ const EditLink = styled.a`
 `;
 
 const EditButton = ({ slug }) => (
-  <Box my={[4, 4, 5]}>
+  <Flex my={[4, 4, 5]}>
     <EditLink
       href={`https://github.com/wbkd/react-flow-docs/edit/main/src/markdown${slug}`}
       target="_blank"
@@ -72,7 +72,11 @@ const EditButton = ({ slug }) => (
       <Icon width="22px" name="pen" colorizeStroke strokeColor="red" />
       Edit this page
     </EditLink>
-  </Box>
+
+    <Box ml="auto" color="#808080">
+      current version: {__REACT_FLOW_VERSION__}
+    </Box>
+  </Flex>
 );
 
 function extendMenu(items, menuData) {
