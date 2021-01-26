@@ -24,6 +24,7 @@ import ReactFlow from 'react-flow-renderer';
 - `snapGrid`: [x, y] array - default: `[15, 15]`
 - `onlyRenderVisibleElements`: default: `true`
 - `translateExtent`: [default `[[-∞, -∞], [+∞, +∞]]`](https://github.com/d3/d3-zoom#zoom_translateExtent)
+- `nodeExtent`: default `[[-∞, -∞], [+∞, +∞]]` defines the extent for the node positions
 
 ### Event Handlers
 
