@@ -31,6 +31,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onElementClick(event, element)`: called when user clicks node or edge
 - `onElementsRemove(elements)`: called when user removes node or edge
 - `onNodeDragStart(event, node)`: node drag start
+- `onNodeDrag(event, node)`: node drag
 - `onNodeDragStop(event, node)`: node drag stop
 - `onNodeMouseEnter(event, node)`: node mouse enter
 - `onNodeMouseMove(event, node)`: node mouse move
