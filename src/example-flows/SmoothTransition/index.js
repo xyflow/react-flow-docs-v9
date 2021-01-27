@@ -41,10 +41,10 @@ const SmoothTranstion = () => {
     (ratio) => () => {
       const { zoom } = rfInstance.toObject();
 
-      new Tween(zoom)
-        .to(zoom * ratio, TRANSITION_TIME)
+      new Tween({ zoom })
+        .to({ zoom: zoom * ratio }, TRANSITION_TIME)
         .easing(EASING)
-        .on('update', (zoom) => rfInstance.zoomTo(zoom))
+        .on('update', ({ zoom }) => rfInstance.zoomTo(zoom))
         .start();
     },
     [rfInstance]
