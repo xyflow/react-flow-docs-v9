@@ -57,13 +57,13 @@ import ReactFlow from 'react-flow-renderer';
 
 ### Interaction
 
-- `nodesDraggable`: default: `true`. This applies to all nodes. You can also change the behavior of a specific node with the `draggable` node option
+- `nodesDraggable`: default: `true`. This applies to all nodes. You can also change the behavior of a specific node with the `draggable` node option. If this option is set to `false` and you have **clickable elements** inside your node, you need to set `pointer-events:all` explicitly for these elements
 - `nodesConnectable`: default: `true`. This applies to all nodes. You can also change the behavior of a specific node with the `connectable` node option
-- `elementsSelectable`: default: `true`. This applies to all elements. You can also change the behavior of a specific node with the `selectable` node option
+- `elementsSelectable`: default: `true`. This applies to all elements. You can also change the behavior of a specific node with the `selectable` node option. If this option is set to `false` and you have **clickable elements** inside your node, you need to set `pointer-events:all` explicitly for these elements
 - `zoomOnScroll`: default: `true`. Zoom the graph in and out using the mousewheel or trackpad
 - `zoomOnPinch`: default: `true`. Zoom the graph in and out using pinch
-- `panOnScroll`: default: `false`. Move the graph while keeping the zoomlevel using mousewheel or trackpad. Overwrites `zoomOnScroll`.
-- `panOnScrollSpeed`: default: `0.5`. Controls how fast the canvas is moved while using the mousewheel. Only has an effect if `panOnScroll` is enabled.
+- `panOnScroll`: default: `false`. Move the graph while keeping the zoomlevel using mousewheel or trackpad. Overwrites `zoomOnScroll`
+- `panOnScrollSpeed`: default: `0.5`. Controls how fast the canvas is moved while using the mousewheel. Only has an effect if `panOnScroll` is enabled
 - `panOnScrollMode`: default: `'free'`. Possible values are `'free'` (all directions), `'vertical'` (only vertical) or `'horizontal'` (only horizontal)
 - `zoomOnDoubleClick`: default: `true`
 - `selectNodesOnDrag`: default: `true`
@@ -88,7 +88,7 @@ import ReactFlow from 'react-flow-renderer';
 - `deleteKeyCode`: `number` | `string` default: `Backspace`
 - `selectionKeyCode`: `number` | `string` default: `Shift` - While pressing the selectionKeyCode and dragging the mouse you can create a selection for multiple nodes and edges
 - `multiSelectionKeyCode`: `number` | `string` default `Meta` - While pressing the multiSelectionKeyCode you can select multiple nodes and edges with a click
-- `zoomActivationKeyCode`: `number` | `string` default `Meta` - While pressing the zoomActivationKeyCode you can zoom even if `panOnScroll=true` or `zoomOnScroll=false`.
+- `zoomActivationKeyCode`: `number` | `string` default `Meta` - While pressing the zoomActivationKeyCode you can zoom even if `panOnScroll=true` or `zoomOnScroll=false`
 
 **Typescript:** The interface of the ReactFlow Prop Types are exported as `ReactFlowProps`. You can use it in your code as follows:
 
