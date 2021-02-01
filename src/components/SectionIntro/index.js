@@ -7,11 +7,7 @@ import { getThemeSpacePx, getThemeColor } from 'utils/css-utils';
 
 const SectionIntroWrapper = styled(Box)`
   text-align: center;
-  /* padding-top: ${getThemeSpacePx(5)};
-  padding-bottom: ${getThemeSpacePx(
-    6
-  )}; */
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
 
   ${H1} {

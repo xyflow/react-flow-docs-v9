@@ -20,7 +20,8 @@ import { baseColors } from 'themes';
 import { getThemeColor, device } from 'utils/css-utils';
 
 const metaTags = {
-  title: 'React Flow',
+  title:
+    'React Flow - An open source library for building node based applications.',
   description:
     'Highly customizable React.js library for building interactive node-based editors, flow charts and diagrams.',
   siteUrl: 'https://reactflow.dev',
@@ -98,10 +99,12 @@ const ExampleButton = styled(Link)`
 const ContactButton = styled(Button)`
   background: ${getThemeColor('red')};
   margin-right: 16px;
+  width: 150px;
 `;
 
 const WorkButton = styled(Button)`
   background: ${getThemeColor('violet')};
+  width: 150px;
 
   &:hover {
     background: ${getThemeColor('red')};
@@ -238,11 +241,11 @@ export default () => <ReactFlow elements={elements} />;`}
 
       <ContentSection>
         <SectionIntro
-          title="Do you want to build a data driven application?"
-          text="Reach out and contact us. We’re happy to chat and always excited for a new data driven challenge."
+          title="Custom Support for Your Project"
+          text="If you want to build something with react-flow and need custom development services reach out and contact us."
         />
 
-        <Flex justifyContent="center">
+        <Flex justifyContent="center" mt={-2}>
           <ContactButton
             as="a"
             href="https://webkid.io/contact"
@@ -262,6 +265,14 @@ export default () => <ReactFlow elements={elements} />;`}
             View other work
           </WorkButton>
         </Flex>
+
+        <Box mt={5} css={{ textAlign: 'center' }}>
+          If you are already using react flow for a commercial project
+          <br />
+          <a href="https://github.com/sponsors/wbkd">
+            we would really appreciate a sponsorhip
+          </a>
+        </Box>
       </ContentSection>
     </Page>
   );
