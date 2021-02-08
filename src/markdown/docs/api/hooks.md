@@ -17,13 +17,17 @@ import { useZoomPanHelper } from 'react-flow';
 export default () => {
   const { fitView } = useZoomPanHelper();
 
-  return <button onClick={() => fitView()}></button>;
+  return (
+    <button
+      onClick={() => fitView({ padding: 0.2, includeHiddenNodes: true })}
+    ></button>
+  );
 };
 ```
 
 The `useZoomPanHelper` hook returns an object containing the following functions:
 
-- `fitView = ({ padding }): void` - fits the view to the nodes on the pane
+- `fitView = ({ padding: number, includeHiddenNodes: boolean }): void` - fits the view to the nodes on the pane. `padding` is `0.1` and `includeHiddenNodes` is `false` by default
 - `zoomIn = (): void` - zooms in
 - `zoomOut = (): void` - zooms out
 - `zoomTo = (zoomLevel: number): void` - zooms to passed zoom level

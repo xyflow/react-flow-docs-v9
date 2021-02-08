@@ -32,9 +32,15 @@ reactFlowInstance.project({ x: 100, y: 100 });
 
 ### `fitView`
 
-Fits the view port so that all nodes are visible
+Fits the view port so that all nodes are visible. `padding` is `0.1` and `includeHiddenNodes` is `false` by default.
 
-`fitView = ({ padding }): void`
+`fitView = ({ padding, includeHiddenNodes }): void`
+
+**example:**
+
+```
+reactFlowInstance.fitView({ padding: 0.25, includeHiddenNodes: true });
+```
 
 ### `zoomIn`
 
