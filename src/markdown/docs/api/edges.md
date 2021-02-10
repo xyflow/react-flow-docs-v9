@@ -26,7 +26,7 @@ If you wanted to display this edge, you would need a node with id = 1 (source no
 - `target`: string (an id of a node) *(required)*
 - `sourceHandle`: string (an id of a handle - you only need this when you have multiple handles)
 - `targetHandle`: string (an id of a handle - you only need this when you have multiple handles)
-- `type`: 'default' (bezier), 'straight', 'step' and 'smoothedge' or a custom one depending on your implementation
+- `type`: 'default' (bezier), 'straight', 'step' and 'smoothstep' or a custom one depending on your implementation
 - `animated`: boolean
 - `style`: css properties for the edge line path
 - `className`: additional class name
