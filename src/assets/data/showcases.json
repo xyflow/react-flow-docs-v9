@@ -1,5 +1,10 @@
 [
   {
+    "title": "Botfront - Conversational platform",
+    "url": "https://botfront.io/",
+    "image": "../images/showcases/botfront-showcase.png"
+  },
+  {
     "title": "Circles - Visual degree planner",
     "url": "https://circles360.github.io/",
     "image": "../images/showcases/circles-showcase.png"
