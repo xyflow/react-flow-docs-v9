@@ -42,6 +42,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onConnectStop(event)`: called when user stops to drag connection line
 - `onConnectEnd(event)`: called after user stops or connects nodes
 - `onEdgeUpdate(oldEdge, newConnection)`: called when the end of an edge gets dragged to another source or target
+- `onEdgeContextMenu(event, edge)`: called when user does a right-click on an edge
 - `onLoad(reactFlowInstance)`: called after flow is initialized
 - `onMove(flowTransform)`: called when user is panning or zooming
 - `onMoveStart(flowTransform)`: called when user starts panning or zooming

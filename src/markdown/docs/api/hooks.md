@@ -2,13 +2,10 @@
 title: Hooks
 ---
 
-<InfoBox title="Note" text="The following hooks are available from version 8.0.0 upwards. You have to use the ReactFlowProvider if you want to use these hooks."/>
-
-For modifying or reading the state of the graph, you can use the following hooks:
+The following hooks can only be used if the component that uses it is a children of a [`ReactFlowProvider`](/docs/api/components/provider/).
 
 ### useZoomPanHelper
 
-This hook can only be used when your application is wrapped with a [`ReactFlowProvider`](/docs/api/components/provider/).
 It can be used to modify the viewport of the react flow graph. Example:
 
 ```javascript
@@ -37,3 +34,17 @@ The `useZoomPanHelper` hook returns an object containing the following functions
 - `initialized: boolean` - `true` when hook is initialized
 
 You can find an example of how to use it here: [useZoomPanHelper example](/examples/use-zoom-pan-helper-hook/)
+
+### useUpdateNodeInternals
+
+When you are **programatically changing the number or the position of handles inside a custom node** you need to notify react flow about it with the `useUpdateNodeInternals` hook. It also updates the internal size. Usage:
+
+```javascript
+import { useUpdateNodeInternals } from 'react-flow';
+
+export default () => {
+  const updateNodeInternals = useUpdateNodeInternals();
+
+  return <button onClick={() => updateNodeInternals('node-id')}></button>;
+};
+```
