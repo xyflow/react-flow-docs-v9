@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactFlow, { Handle } from 'react-flow-renderer';
+import ReactFlow, { Handle, ReactFlowProvider } from 'react-flow-renderer';
 
-const elements = [
+const elementsCustom = [
   {
     id: '2',
     type: 'special',
@@ -41,10 +41,16 @@ const nodeTypes = {
   special: CustomNodeComponent,
 };
 
-export default () => {
+const wrapperStyle = { height: 300, border: '1px solid #C5CBD2' };
+
+const CustomNodeExample = () => {
   return (
-    <div style={{ height: 300, border: '1px solid #C5CBD2' }}>
-      <ReactFlow elements={elements} nodeTypes={nodeTypes} />
+    <div style={wrapperStyle} className="custom">
+      <ReactFlowProvider>
+        <ReactFlow elements={elementsCustom} nodeTypes={nodeTypes} />
+      </ReactFlowProvider>
     </div>
   );
 };
+
+export default CustomNodeExample;

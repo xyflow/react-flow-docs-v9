@@ -52,7 +52,7 @@ If you have controls or other elements inside your custom node that should not d
 
 If you want to allow scrolling inside a node or inside an element of a node you can add the class name `nowheel` to the node or the element.
 
-## Basic Implemantation
+## Basic Implementation
 
 A basic implementation of a custom node could look like this:
 
@@ -100,15 +100,17 @@ const nodeTypes = {
   special: CustomNodeComponent,
 };
 
-export default () => {
+const CustomNodeExample = () => {
   return (
     <div style={{ height: 300 }}>
       <ReactFlow elements={elements} nodeTypes={nodeTypes} />
     </div>
   );
 };
+
+export default CustomNodeExample;
 ```
 
-import Flow from './index';
+import CustomNodeFlow from './node-types';
 
-<Flow />
+<CustomNodeFlow />
