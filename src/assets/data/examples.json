@@ -88,5 +88,10 @@
     "title": "Smooth Transition",
     "slug": "examples/smooth-transition",
     "source": "SmoothTransition"
+  },
+  {
+    "title": "Contextual Zoom",
+    "slug": "examples/contextual-zoom-features",
+    "source": "ContextualZoomFeatures"
   }
 ]
