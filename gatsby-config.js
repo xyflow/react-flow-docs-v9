@@ -6,6 +6,7 @@ module.exports = {
       'React Flow is a highly customizable library for building interactive node-based editors, flow charts and diagrams.',
   },
   plugins: [
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
