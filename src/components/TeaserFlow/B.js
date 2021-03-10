@@ -78,6 +78,8 @@ const onLoad = (rf) => setTimeout(() => rf.fitView({ padding: 0.1 }), 1);
 
 const findNodeById = (id) => (n) => n.id === id;
 
+const hasTouch = typeof window !== 'undefined' && 'ontouchstart' in window;
+
 export default () => {
   const [elements, setElements] = useState([]);
 
@@ -186,6 +188,7 @@ export default () => {
           onLoad={onLoad}
           zoomOnScroll={false}
           nodesConnectable={false}
+          paneMoveable={!hasTouch}
         >
           <Background color={baseColors.silverDarken60} gap={15} />
           <Controls showInteractive={false} />

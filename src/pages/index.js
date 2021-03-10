@@ -100,11 +100,17 @@ const ContactButton = styled(Button)`
   background: ${getThemeColor('red')};
   margin-right: 16px;
   width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const WorkButton = styled(Button)`
   background: ${getThemeColor('violet')};
   width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background: ${getThemeColor('red')};
@@ -231,48 +237,52 @@ export default () => <ReactFlow elements={elements} />;`}
       </ContentSection>
 
       <ContentSection bg="violetLighten5">
-        <SectionIntro
-          title="Built with React Flow"
-          text="You can do a wide range of applications with React Flow. Ranging from music synthesizers and study planners to visualizations of neural nets."
-          color={baseColors.textLight}
-        />
+        <CenterContent>
+          <SectionIntro
+            title="Built with React Flow"
+            text="You can do a wide range of applications with React Flow. Ranging from music synthesizers and study planners to visualizations of neural nets."
+            color={baseColors.textLight}
+          />
+        </CenterContent>
         <Showcases />
       </ContentSection>
 
       <ContentSection>
-        <SectionIntro
-          title="Custom Support for Your Project"
-          text="If you want to build something with react-flow and need custom development services reach out and contact us."
-        />
+        <CenterContent>
+          <SectionIntro
+            title="Custom Support for Your Project"
+            text="If you want to build something with react-flow and need custom development services reach out and contact us."
+          />
 
-        <Flex justifyContent="center" mt={-2}>
-          <ContactButton
-            as="a"
-            href="https://webkid.io/contact"
-            icon="mail"
-            type="big"
-            color="textInverted"
-          >
-            Contact us
-          </ContactButton>
-          <WorkButton
-            as="a"
-            href="https://webkid.io/portfolio"
-            icon="eye"
-            type="big"
-            color="textInverted"
-          >
-            View other work
-          </WorkButton>
-        </Flex>
+          <Flex justifyContent="center" mt={-2}>
+            <ContactButton
+              as="a"
+              href="https://webkid.io/contact"
+              icon="mail"
+              type="big"
+              color="textInverted"
+            >
+              Contact us
+            </ContactButton>
+            <WorkButton
+              as="a"
+              href="https://webkid.io/portfolio"
+              icon="eye"
+              type="big"
+              color="textInverted"
+            >
+              View other work
+            </WorkButton>
+          </Flex>
 
-        <Box mt={5} css={{ textAlign: 'center' }}>
-          If you are already using react flow for a commercial project
-          <br />
-          <a href="https://github.com/sponsors/wbkd">
-            we would really appreciate a sponsorhip
-          </a>
-        </Box>
+          <Box mt={5} css={{ textAlign: 'center' }}>
+            If you are already using react flow for a commercial project we
+            would really{' '}
+            <a href="https://github.com/sponsors/wbkd">
+              appreciate a sponsorhip
+            </a>
+          </Box>
+        </CenterContent>
       </ContentSection>
     </Page>
   );

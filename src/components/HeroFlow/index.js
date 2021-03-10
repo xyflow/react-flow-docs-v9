@@ -143,7 +143,7 @@ export default () => {
         onConnect={onConnect}
         paneMoveable={!hasTouch}
       >
-        <Background />
+        <Background variant="dots" />
         <Controls showInteractive={false} />
       </ReactFlow>
     </ReactFlowProvider>

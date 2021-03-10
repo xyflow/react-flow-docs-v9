@@ -80,6 +80,7 @@ const initialElements = [
 ];
 
 const onLoad = (rf) => rf.fitView({ padding: 0.2 });
+const hasTouch = typeof window !== 'undefined' && 'ontouchstart' in window;
 
 export default () => {
   const [elements, setElements] = useState(initialElements);
@@ -96,6 +97,7 @@ export default () => {
           onLoad={onLoad}
           zoomOnScroll={false}
           onConnect={onConnect}
+          paneMoveable={!hasTouch}
         >
           <Background color={baseColors.silverDarken60} gap={15} />
           <Controls showInteractive={false} />

@@ -2,12 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import Link from 'gatsby-link';
-import ReactFlow, {
-  ReactFlowProvider,
-  Background,
-  Controls,
-  MiniMap,
-} from 'react-flow-renderer';
 
 import { H2, Text } from 'components/Typo';
 import Icon from 'components/Icon';
@@ -97,14 +91,9 @@ export default ({
   title,
   description,
   textPosition = 'left',
-  flowProps,
-  withControls = false,
-  withMinimap = false,
   isDark = false,
-  linesBg = false,
   children,
 }) => {
-  const bgColor = isDark ? baseColors.violetLighten60 : baseColors.violet;
   const reactFlowOrder = textPosition === 'left' ? 2 : 1;
 
   return (
@@ -117,21 +106,7 @@ export default ({
         isDark={isDark}
         order={reactFlowOrder}
       >
-        {children ? (
-          children
-        ) : (
-          <ReactFlowProvider>
-            <ReactFlow {...flowProps} zoomOnScroll={false}>
-              <Background
-                color={linesBg ? '#eee' : bgColor}
-                gap={15}
-                variant={linesBg ? 'lines' : 'dots'}
-              />
-              {withControls && <Controls />}
-              {withMinimap && <MiniMap />}
-            </ReactFlow>
-          </ReactFlowProvider>
-        )}
+        {children}
       </ReactFlowWrapper>
       {textPosition !== 'left' && (
         <Description order={2} title={title} description={description} />

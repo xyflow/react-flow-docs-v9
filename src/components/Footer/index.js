@@ -14,7 +14,7 @@ const Wrapper = styled.footer`
 const Header = ({ hasBorder = false }) => {
   return (
     <Wrapper hasBorder={hasBorder}>
-      <Flex p={4}>
+      <Flex py={4} px={3}>
         <Flex alignItems="center">
           A project by
           <a href="https://webkid.io" style={{ marginLeft: 8 }}>
