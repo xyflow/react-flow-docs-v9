@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import CenterContent from 'components/CenterContent';
 import useShowcaseImages from 'hooks/useShowcaseImages';
@@ -11,7 +11,7 @@ import reactFlowIconSrc from 'assets/images/react-flow-logo.svg';
 
 const gridPadding = 2;
 
-const RoundImage = styled(Img)`
+const RoundImage = styled(GatsbyImage)`
   border-radius: 4px;
   height: 250px;
   transition: transform 200ms ease;
@@ -61,7 +61,9 @@ const Showcases = () => {
             mb={[3, 3, 0]}
           >
             <Link href={showcase.url} target="_blank" rel="noopener noreferrer">
-              <RoundImage fluid={showcase.image.childImageSharp.fluid} />
+              <RoundImage
+                image={showcase.image.childImageSharp.gatsbyImageData}
+              />
               <Title>{showcase.title}</Title>
 
               {showcase.url}

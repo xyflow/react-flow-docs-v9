@@ -11,9 +11,7 @@ export default function useFeaturedProjects() {
             url
             image {
               childImageSharp {
-                fluid(maxWidth: 550, quality: 80, toFormat: JPG) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: CONSTRAINED, width: 600)
               }
             }
           }
