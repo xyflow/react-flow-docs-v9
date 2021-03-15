@@ -31,6 +31,7 @@ The `useZoomPanHelper` hook returns an object containing the following functions
 - `transform: (transform: FlowTransform): void` - sets the transform of the pane
 - `setCenter: (x: number, y: number, zoom?: number): void` - sets the center to the passed params. If no zoom is passed the maxZoom is used
 - `fitBounds: (bounds: Rect, padding?: number): void` - fits the pane to the passed bounds (object with width x, y, width and height: `{ x: 0, y: 0, width: 100, height: 100 }`)
+- `project: (position: XYPosition) => XYPosition`: Transforms pixel coordinates to the internal ReactFlow coordinate system. This can be used when you drag nodes (from a side bar for example) and need the internal position on the pane.
 - `initialized: boolean` - `true` when hook is initialized
 
 You can find an example of how to use it here: [useZoomPanHelper example](/examples/use-zoom-pan-helper-hook/)
