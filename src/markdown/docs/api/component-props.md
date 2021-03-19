@@ -37,6 +37,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onNodeMouseMove(event, node)`: node mouse move
 - `onNodeMouseLeave(event, node)`: node mouse leave
 - `onNodeContextMenu(event, node)`: node context menu
+- `onNodeDoubleClick(event, node)`: node double click
 - `onConnect({ source, target })`: called when user connects two nodes
 - `onConnectStart(event, { nodeId, handleType })`: called when user starts to drag connection line
 - `onConnectStop(event)`: called when user stops to drag connection line
