@@ -9,7 +9,7 @@ The following hooks can only be used if the component that uses it is a children
 It can be used to modify the viewport of the react flow graph. Example:
 
 ```javascript
-import { useZoomPanHelper } from 'react-flow';
+import { useZoomPanHelper } from 'react-flow-renderer';
 
 export default () => {
   const { fitView } = useZoomPanHelper();
