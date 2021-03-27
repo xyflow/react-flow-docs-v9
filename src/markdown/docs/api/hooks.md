@@ -41,7 +41,7 @@ You can find an example of how to use it here: [useZoomPanHelper example](/examp
 When you are **programatically changing the number or the position of handles inside a custom node** you need to notify react flow about it with the `useUpdateNodeInternals` hook. It also updates the internal size. Usage:
 
 ```javascript
-import { useUpdateNodeInternals } from 'react-flow';
+import { useUpdateNodeInternals } from 'react-flow-renderer';
 
 export default () => {
   const updateNodeInternals = useUpdateNodeInternals();
