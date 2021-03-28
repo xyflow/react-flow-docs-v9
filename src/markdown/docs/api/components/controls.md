@@ -10,7 +10,7 @@ The control panel contains a zoom-in, zoom-out, fit-view and a lock/unlock butto
 import ReactFlow, { Controls } from 'react-flow-renderer';
 
 const FlowWithControls = () => (
-  <ReactFlow elements={elements}>
+  <ReactFlow elements={[]}>
     <Controls />
   </ReactFlow>
 );
@@ -29,3 +29,28 @@ const FlowWithControls = () => (
 - `onInteractiveChange`: callback function that gets triggered when the lock button is pressed - passes the new value
 
 **Typescript:** The interface of the Controls Prop Types are exported as `ControlProps`.
+
+## Extended Controls
+
+When you want to add buttons to the control panel you can use the `ControlsButton` component and pass it as a children to the `Controls` component:
+
+```jsx
+import ReactFlow, { Controls, ControlsButton } from 'react-flow-renderer';
+
+const FlowWithExtendedControls = () => (
+  <ReactFlow elements={[]}>
+    <Controls>
+      <ControlsButton onClick={() => console.log('action')}>
+        <FancyIcon />
+      </ControlsButton>
+      <ControlsButton onClick={() => console.log('another action')}>
+        <AnotherFancyIcon />
+      </ControlsButton>
+    </Controls>
+  </ReactFlow>
+);
+```
+
+### ControlsButton Prop Types
+
+All props get passed to the `ControlsButton` component.
