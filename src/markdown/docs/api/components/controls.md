@@ -35,17 +35,17 @@ const FlowWithControls = () => (
 When you want to add buttons to the control panel you can use the `ControlsButton` component and pass it as a children to the `Controls` component:
 
 ```jsx
-import ReactFlow, { Controls, ControlsButton } from 'react-flow-renderer';
+import ReactFlow, { Controls, ControlButton } from 'react-flow-renderer';
 
 const FlowWithExtendedControls = () => (
   <ReactFlow elements={[]}>
     <Controls>
-      <ControlsButton onClick={() => console.log('action')}>
+      <ControlButton onClick={() => console.log('action')}>
         <FancyIcon />
-      </ControlsButton>
-      <ControlsButton onClick={() => console.log('another action')}>
+      </ControlButton>
+      <ControlButton onClick={() => console.log('another action')}>
         <AnotherFancyIcon />
-      </ControlsButton>
+      </ControlButton>
     </Controls>
   </ReactFlow>
 );
