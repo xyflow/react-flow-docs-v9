@@ -276,8 +276,7 @@ export default () => <ReactFlow elements={elements} />;`}
           </Flex>
 
           <Box mt={5} css={{ textAlign: 'center' }}>
-            If you are already using react flow for a commercial project we
-            would really{' '}
+            If you are using react flow for a commercial project we would really{' '}
             <a href="https://github.com/sponsors/wbkd">
               appreciate a sponsorhip
             </a>
