@@ -179,7 +179,6 @@ const DataBlocksAd = styled(Box)`
   text-align: center;
   padding: 7px 10px;
   background: ${getThemeColor('silverLighten30')};
-  cursor: pointer;
 
   a:hover {
     color: ${getThemeColor('silverDarken75')};
