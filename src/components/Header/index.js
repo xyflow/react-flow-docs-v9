@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
+import { useLocation } from '@reach/router';
 
 import Icon from 'components/Icon';
 import Button from 'components/Button';
@@ -170,7 +171,22 @@ const LogoSubtitle = styled(Box)`
   line-height: 1.2;
 `;
 
-const Header = () => {
+const DataBlocksAd = styled(Box)`
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: ${getThemeColor('silverDarken30')};
+  line-height: 1.2;
+  text-align: center;
+  padding: 7px 10px;
+  background: ${getThemeColor('silverLighten30')};
+  cursor: pointer;
+
+  a:hover {
+    color: ${getThemeColor('silverDarken75')};
+  }
+`;
+
+const Header = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuHeight = useMenuHeight();
 
@@ -182,8 +198,20 @@ const Header = () => {
     setMenuOpen(nextMenuOpen);
   };
 
+  const location = useLocation();
+
   return (
     <Wrapper>
+      {location.pathname === '/' && (
+        <DataBlocksAd>
+          React Flow was created for a node-based data processing editor. Get
+          alpha access on the{' '}
+          <a href="https://datablocks.pro" target="_blank">
+            datablocks website
+          </a>
+          .
+        </DataBlocksAd>
+      )}
       <Centered>
         <Flex as={Link} to="/">
           <Image src={ReactFlowLogo} alt="React Flow Logo" />
