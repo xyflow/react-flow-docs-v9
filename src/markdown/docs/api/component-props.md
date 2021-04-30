@@ -22,7 +22,7 @@ import ReactFlow from 'react-flow-renderer';
 - `defaultPosition`: default: `[0, 0]`
 - `snapToGrid`: default: `false`
 - `snapGrid`: [x, y] array - default: `[15, 15]`
-- `onlyRenderVisibleElements`: default: `true`
+- `onlyRenderVisibleElements`: default: `false`
 - `translateExtent`: [default `[[-∞, -∞], [+∞, +∞]]`](https://github.com/d3/d3-zoom#zoom_translateExtent)
 - `nodeExtent`: default `[[-∞, -∞], [+∞, +∞]]` defines the extent for the node positions
 
@@ -47,6 +47,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onEdgeMouseMove(event, edge)`: edge mouse move
 - `onEdgeMouseLeave(event, edge)`: edge mouse leave
 - `onEdgeContextMenu(event, edge)`: called when user does a right-click on an edge
+- `onEdgeUpdateStart(event, edge)`: called when user starts to update an edge
 - `onLoad(reactFlowInstance)`: called after flow is initialized
 - `onMove(flowTransform)`: called when user is panning or zooming
 - `onMoveStart(flowTransform)`: called when user starts panning or zooming
