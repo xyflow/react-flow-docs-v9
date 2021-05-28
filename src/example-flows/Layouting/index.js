@@ -42,8 +42,8 @@ const getLayoutedElements = (elements, direction = 'TB') => {
       el.targetPosition = isHorizontal ? 'left' : 'top';
       el.sourcePosition = isHorizontal ? 'right' : 'bottom';
 
-      // unfortunately we need this little hack to pass a slighltiy different position
-      // to notify react flow about the change. More over we are shifting the dagre node position
+      // unfortunately we need this little hack to pass a slightly different position
+      // to notify react flow about the change. Moreover we are shifting the dagre node position
       // (anchor=center center) to the top left so it matches the react flow node anchor point (top left).
       el.position = {
         x: nodeWithPosition.x - nodeWidth / 2 + Math.random() / 1000,
