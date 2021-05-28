@@ -73,7 +73,7 @@ import ReactFlow from 'react-flow-renderer';
 - `panOnScrollMode`: default: `'free'`. Possible values are `'free'` (all directions), `'vertical'` (only vertical) or `'horizontal'` (only horizontal)
 - `zoomOnDoubleClick`: default: `true`
 - `selectNodesOnDrag`: default: `true`
-- `paneMoveable`: default: `true` - If set to `false`, panning and zooming is disabled
+- `paneMoveable`: default: `true` - If set to `false`, panning is disabled
 - `connectionMode`: default: `'strict'`. Possible values are `'strict'` (only source to target connections are possible) or `'loose'` (source to source and target to target connections are allowed)
 
 ### Element Customization
