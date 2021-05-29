@@ -48,6 +48,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onEdgeMouseLeave(event, edge)`: edge mouse leave
 - `onEdgeContextMenu(event, edge)`: called when user does a right-click on an edge
 - `onEdgeUpdateStart(event, edge)`: called when user starts to update an edge
+- `onEdgeUpdateEnd(event, edge)`: called when user ends an edge update (for TS users: this is a normal `MouseEvent` and not a `React.MouseEvent` like the other ones).
 - `onLoad(reactFlowInstance)`: called after flow is initialized
 - `onMove(flowTransform)`: called when user is panning or zooming
 - `onMoveStart(flowTransform)`: called when user starts panning or zooming
