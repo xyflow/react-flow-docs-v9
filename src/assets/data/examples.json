@@ -20,6 +20,11 @@
     "source": "Edges"
   },
   {
+    "title": "Edge With Button",
+    "slug": "examples/edge-with-button",
+    "source": "EdgeWithButton"
+  },
+  {
     "title": "Updatable Edge",
     "slug": "examples/updatable-edge/",
     "source": "UpdatableEdge"
