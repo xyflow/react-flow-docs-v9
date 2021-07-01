@@ -25,6 +25,7 @@ import ReactFlow from 'react-flow-renderer';
 - `onlyRenderVisibleElements`: default: `false`
 - `translateExtent`: [default `[[-∞, -∞], [+∞, +∞]]`](https://github.com/d3/d3-zoom#zoom_translateExtent)
 - `nodeExtent`: default `[[-∞, -∞], [+∞, +∞]]` defines the extent for the node positions
+- `preventScrolling`: default `true` if true default browser scroll behaviour is prevented
 
 ### Event Handlers
 

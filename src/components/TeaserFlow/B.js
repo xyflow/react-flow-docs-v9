@@ -189,6 +189,7 @@ export default () => {
           zoomOnScroll={false}
           nodesConnectable={false}
           paneMoveable={!hasTouch}
+          preventScrolling={false}
         >
           <Background color={baseColors.silverDarken60} gap={15} />
           <Controls showInteractive={false} />

@@ -187,6 +187,7 @@ export default () => {
           onConnect={onConnect}
           connectionLineType="step"
           paneMoveable={!hasTouch}
+          preventScrolling={false}
         >
           <Background variant="lines" gap={20} />
           <Controls showInteractive={false} />

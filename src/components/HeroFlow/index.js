@@ -142,6 +142,7 @@ export default () => {
         nodeTypes={nodeTypes}
         onConnect={onConnect}
         paneMoveable={!hasTouch}
+        preventScrolling={false}
       >
         <Background variant="dots" />
         <Controls showInteractive={false} />
