@@ -278,7 +278,7 @@ export default () => <ReactFlow elements={elements} />;`}
           <Box mt={5} css={{ textAlign: 'center' }}>
             If you are using react flow for a commercial project we would really{' '}
             <a href="https://github.com/sponsors/wbkd">
-              appreciate a sponsorhip
+              appreciate a sponsorship
             </a>
           </Box>
         </CenterContent>
