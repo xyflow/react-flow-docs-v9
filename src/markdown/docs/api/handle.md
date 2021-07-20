@@ -25,6 +25,7 @@ const targetHandleWithValidation = (
 - `position`: 'left', 'right', 'top' or 'bottom' handle position - default: 'top' for type target, 'bottom' for type source
 - `onConnect`: function that gets triggered on connect. This callback only gets executed on source handles.
 - `isValidConnection`: function receives a connection `{ target: 'some-id', source: 'another-id', sourceHandle: 'source handle id or null', targetHandle: 'target handle id or null' }` as param, returns a boolean - default: `true`.
+- `isConnectable` boolean (this prop gets passed to your custom node component)
 - `style`: css properties
 - `className`: additional class name
 
