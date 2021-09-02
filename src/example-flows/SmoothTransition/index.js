@@ -27,7 +27,7 @@ const initialElements = [
   { id: 'e1-3', source: '1', target: '3' },
 ];
 
-const SmoothTranstion = () => {
+const SmoothTransition = () => {
   const [rfInstance, setRfInstance] = useState(null);
   const [elements, setElements] = useState(initialElements);
   const onConnect = (params) => setElements((els) => addEdge(params, els));
@@ -84,4 +84,4 @@ const SmoothTranstion = () => {
   );
 };
 
-export default SmoothTranstion;
+export default SmoothTransition;
