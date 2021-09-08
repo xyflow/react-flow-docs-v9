@@ -2,7 +2,7 @@
 title: Internal State and Actions
 ---
 
-Under the hood React Flow uses [Easy Peasy](https://easy-peasy.now.sh/) for state handling.
+Under the hood React Flow uses [Redux](https://redux.js.org/) for state handling.
 If you need to access the internal state you can use the `useStoreState` hook inside a child component of the `ReactFlow` component:
 
 ### Internal state
