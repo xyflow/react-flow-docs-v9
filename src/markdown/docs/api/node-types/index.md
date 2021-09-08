@@ -42,7 +42,7 @@ Your custom nodes are wrapped so that the basic functions like dragging or selec
 
 ### Styling
 
-When you create a new node type you also need to implement some styling. Your custom has no default styles.
+When you create a new node type you also need to implement some styling. Your custom node has no default styles.
 
 ### Prevent dragging & selecting
 
