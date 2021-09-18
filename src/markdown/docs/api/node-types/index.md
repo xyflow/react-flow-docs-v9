@@ -26,7 +26,7 @@ const Flow = (
 ```
 
 You can now use the type `special` for a node.
-The `default`, `input` and `output` types would be still available except you overwrote one of them.
+The `default`, `input` and `output` types would still be available except you overwrote one of them.
 There is more advanced example of a custom node implementation in the [custom node example](/examples/custom-node).
 
 ## Prop Types
