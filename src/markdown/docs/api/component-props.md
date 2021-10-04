@@ -82,6 +82,8 @@ import ReactFlow from 'react-flow-renderer';
 
 - `nodeTypes`: object with [node types](/docs/api/node-types/)
 - `edgeTypes`: object with [edge types](/docs/api/edge-types/)
+- `nodeTypesId`: if you need to update your nodeTypes, you can pass a unique id here (we will remove this hack in the v10 release)
+- `edgeTypesId`: if you need to update your edgeTypes, you can pass a unique id here (we will remove this hack in the v10 release)
 - `arrowHeadColor`: default: `#b1b1b7`
 - `markerEndId`: Gets used as the marker-end attribute of the edges
 
