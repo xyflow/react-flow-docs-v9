@@ -98,5 +98,10 @@
     "title": "Contextual Zoom",
     "slug": "examples/contextual-zoom-features",
     "source": "ContextualZoomFeatures"
+  },
+  {
+    "title": "Drag Handle",
+    "slug": "examples/drag-handle",
+    "source": "DragHandle"
   }
 ]
