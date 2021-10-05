@@ -9,6 +9,7 @@ const examplePagesQuery = `{
         slug
         title
         source
+        description
       }
     }
   }
@@ -17,15 +18,16 @@ const examplePagesQuery = `{
 
 const createExamplePage = (createPage, examplePages) => {
   examplePages.forEach((page) => {
-    const { slug, title, source } = page.node;
+    const { slug, title, source, description } = page.node;
 
     createPage({
       path: slug,
       component: exampleTemplate,
       context: {
-        slug: slug,
-        title: title,
-        source: source,
+        slug,
+        title,
+        source,
+        description,
         sourceSlug: `/example-flows/${source}/`,
       },
     });

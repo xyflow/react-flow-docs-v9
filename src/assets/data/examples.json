@@ -2,106 +2,127 @@
   {
     "title": "Overview",
     "slug": "examples/",
-    "source": "Overview"
+    "source": "Overview",
+    "description": "This is a very basic example of a React Flow graph. On the bottom left you see the Controls and on the bottom right the MiniMap component. You can see different node types (input, default, output), edge types (bezier, step and smoothstep), edge labels and custom styled edge labels."
   },
   {
     "title": "Custom Node",
     "slug": "examples/custom-node/",
-    "source": "CustomNode"
+    "source": "CustomNode",
+    "description": "This is an example of a custom node implementation. You can display any content and functionality inside a custom node. The instructions about how to set up a custom node can be found on the <a href=\"/docs/api/node-types/#custom-nodes\">custom nodes doc page</a>."
   },
   {
     "title": "Update Node",
     "slug": "examples/update-node/",
-    "source": "UpdateNode"
+    "source": "UpdateNode",
+    "description": "This example shows how to update a specific node data attribute. Be aware that you need to create a new data object and always pass the newly created elements array to the React Flow component."
   },
   {
     "title": "Edges",
     "slug": "examples/edges/",
-    "source": "Edges"
+    "source": "Edges",
+    "description": "As you can see, React Flow comes with different edge types - bezier, step and smoothstep. It's also possible to create a <a href=\"/docs/api/edge-types/#custom-edges\">custom edge</a>."
   },
   {
     "title": "Edge With Button",
     "slug": "examples/edge-with-button",
-    "source": "EdgeWithButton"
+    "source": "EdgeWithButton",
+    "description": "This is an example of a custom edge implementation with a button. In order to leave SVG world we are using <code>foreignObject</code> inside the custom edge to be able to use <code>&lt;button&gt;</code>."
   },
   {
     "title": "Updatable Edge",
     "slug": "examples/updatable-edge/",
-    "source": "UpdatableEdge"
+    "source": "UpdatableEdge",
+    "description": "You can drag an edge to another handle if you are using the <code>onEdgeUpdate</code> property."
   },
   {
     "title": "Horizontal",
     "slug": "examples/horizontal/",
-    "source": "Horizontal"
+    "source": "Horizontal",
+    "description": "Handles can be positioned on all sides of a node by using different <code>sourcePosition</code> and <code>targetPosition</code> values."
   },
   {
     "title": "Interaction",
     "slug": "examples/interaction/",
-    "source": "Interaction"
+    "source": "Interaction",
+    "description": "This example shows the different props that control the interactivity of a flow."
   },
   {
     "title": "Provider",
     "slug": "examples/provider/",
-    "source": "Provider"
+    "source": "Provider",
+    "description": "If you have multiple flows on a page or if you are working with a client side router you need to wrap each flow with a <code>&lt;ReactFlowProvider&gt;</code> so that every flow has its own store instance."
   },
   {
     "title": "Validation",
     "slug": "examples/validation/",
-    "source": "Validation"
+    "source": "Validation",
+    "description": "Custom nodes use <code>Handle</code> components. You can pass a custom validation function to these handles in order to check if a new connection is valid and should be added."
   },
   {
     "title": "useZoomPanHelper",
     "slug": "examples/use-zoom-pan-helper-hook/",
-    "source": "ZoomPanHelper"
+    "source": "ZoomPanHelper",
+    "description": "This example illustrates how to use the <a href=\"/docs/api/hooks/#useZoomPanHelper\"><code>useZoomPanHelper</code> hook</a>. It comes with a lot of useful helpers like zoomIn, zoomOut, setCenter, fitBounds and more."
   },
   {
     "title": "Drag and Drop",
     "slug": "examples/drag-and-drop/",
-    "source": "DragNDrop"
+    "source": "DragNDrop",
+    "description": "Drag and Drop sidebar handling is not built in but can be implemented with the native HTML Drag and Drop API, as this example shows."
   },
   {
     "title": "Layouting",
     "slug": "examples/layouting/",
-    "source": "Layouting"
+    "source": "Layouting",
+    "description": "React Flow has no built in layouting but it can be achieved with a third party library like elkjs or dagre."
   },
   {
     "title": "Save and Restore",
     "slug": "examples/save-and-restore/",
-    "source": "SaveRestore"
+    "source": "SaveRestore",
+    "description": "If you want to save and restore a flow you can use the <code>toObject</code> function of the <a href=\"/docs/api/react-flow-instance/\">React Flow instance</a>."
   },
   {
     "title": "Stress",
     "slug": "examples/stress/",
-    "source": "Stress"
+    "source": "Stress",
+    "description": "Just a stress test with a lot of nodes and edges."
   },
   {
     "title": "Custom Connectionline",
     "slug": "examples/custom-connectionline/",
-    "source": "CustomConnectionLine"
+    "source": "CustomConnectionLine",
+    "description": "This example shows the implementation and usage of a custom connection line."
   },
   {
     "title": "Edge Types",
     "slug": "examples/edge-types/",
-    "source": "EdgeTypes"
+    "source": "EdgeTypes",
+    "description": "Example that shows all the different edge types of React Flow."
   },
   {
     "title": "Hidden",
     "slug": "examples/hidden/",
-    "source": "Hidden"
+    "source": "Hidden",
+    "description": "Nodes and edges can be hidden by using the <code>isHidden</code> attribute. This is useful for implementing expandable/collapsible nodes."
   },
   {
     "title": "Smooth Transition",
     "slug": "examples/smooth-transition",
-    "source": "SmoothTransition"
+    "source": "SmoothTransition",
+    "description": "You can use any third party tweening library for showing transitions for zoom and transform changes."
   },
   {
     "title": "Contextual Zoom",
     "slug": "examples/contextual-zoom-features",
-    "source": "ContextualZoomFeatures"
+    "source": "ContextualZoomFeatures",
+    "description": "This example shows how the current zoom level can be used by a node to decide which content is visible."
   },
   {
     "title": "Drag Handle",
     "slug": "examples/drag-handle",
-    "source": "DragHandle"
+    "source": "DragHandle",
+    "description": "With the <code>dragHandle</code> selector attribute of a node you can specify which area should be used to drag it."
   }
 ]

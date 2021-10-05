@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
+import { ReactFlowProvider } from 'react-flow-renderer';
 
 import ExamplePage from 'components/Page/Example';
-import { ReactFlowProvider } from 'react-flow-renderer';
 
 export default ({ data, pageContext }) => {
   const [flow, setFlow] = useState(null);
@@ -28,6 +28,7 @@ export default ({ data, pageContext }) => {
     <ExamplePage
       title={pageContext.title}
       slug={pageContext.slug}
+      description={pageContext.description}
       sourceCodeFiles={sourceCodeFiles}
     >
       <ReactFlowProvider>{flow && <flow.default />}</ReactFlowProvider>

@@ -6,7 +6,7 @@ import Page from 'components/Page';
 import Sidebar from 'components/Sidebar';
 import useExamplePages from 'hooks/useExamplePages';
 import CodeBlock from 'components/CodeBlock';
-import { H4 } from 'components/Typo';
+import { Text, H4 } from 'components/Typo';
 
 import 'example-flows/Overview';
 
@@ -40,7 +40,7 @@ const SourceCodeBlock = ({ absolutePath, internal }) => {
   );
 };
 
-export default ({ children, title, slug, sourceCodeFiles = [] }) => {
+export default ({ children, title, slug, description, sourceCodeFiles = [] }) => {
   const menu = useExamplePages();
 
   const metaTags = {
@@ -59,6 +59,7 @@ export default ({ children, title, slug, sourceCodeFiles = [] }) => {
           {children}
           {hasSource && (
             <SourceWrapper p={3}>
+              {description && <Text dangerouslySetInnerHTML={{ __html: description }} />}
               <H4 as="div">{title} Source Code</H4>
               {sourceCodeFiles.map((source) => (
                 <SourceCodeBlock key={source.absolutePath} {...source} />

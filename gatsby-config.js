@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `React Flow`,
+    title: `React Flow - Open Source Library`,
     siteUrl: `https://reactflow.dev`,
     description:
       'React Flow is a highly customizable library for building interactive node-based editors, flow charts and diagrams.',
