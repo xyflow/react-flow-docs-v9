@@ -203,8 +203,7 @@ const Header = (props) => {
     <Wrapper>
       {location.pathname === '/' && (
         <DataBlocksAd>
-          React Flow was created for a node-based data processing editor. Get
-          alpha access on the{' '}
+          React Flow was created for a node-based data processing editor. Sign up on the{' '}
           <a href="https://datablocks.pro" target="_blank">
             datablocks website
           </a>
