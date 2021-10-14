@@ -124,5 +124,11 @@
     "slug": "examples/drag-handle",
     "source": "DragHandle",
     "description": "With the <code>dragHandle</code> selector attribute of a node you can specify which area should be used to drag it."
+  },
+  {
+    "title": "Floating Edges",
+    "slug": "examples/floating-edges",
+    "source": "FloatingEdges",
+    "description": "Example implemenation of a floating edge. The source and target position of the edges are getting calculated dynamically. You can find the implementation details in the utils.ts file."
   }
 ]
