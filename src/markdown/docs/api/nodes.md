@@ -29,7 +29,7 @@ Node example:
 - `draggable`: boolean - if option is not set, the node is draggable (overwrites general `nodesDraggable` option)
 - `connectable`: boolean - if option is not set, the node is connectable (overwrites general `nodesConnectable` option)
 - `selectable`: boolean - if option is not set, the node is selectable (overwrites general `elementsSelectable` option)
-- `dragHandler`: string - selector for specifying an element as a drag handler
+- `dragHandle`: string - selector for specifying an element as a drag handle
 
 ## Update Node Options
 
