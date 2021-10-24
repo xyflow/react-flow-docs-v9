@@ -203,7 +203,7 @@ const Header = (props) => {
     <Wrapper>
       {location.pathname === '/' && (
         <DataBlocksAd>
-          Help us to make React Flow even better by 
+          Help us to make React Flow even better by{' '} 
           <a href="https://github.com/sponsors/wbkd" target="_blank">
             sponsoring our work
           </a>
