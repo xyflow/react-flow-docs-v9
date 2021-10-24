@@ -203,9 +203,9 @@ const Header = (props) => {
     <Wrapper>
       {location.pathname === '/' && (
         <DataBlocksAd>
-          React Flow was created for a node-based data processing editor. Sign up on the{' '}
-          <a href="https://datablocks.pro" target="_blank">
-            datablocks website
+          Help us to make React Flow even better by 
+          <a href="https://github.com/sponsors/wbkd" target="_blank">
+            sponsoring our work
           </a>
           .
         </DataBlocksAd>
