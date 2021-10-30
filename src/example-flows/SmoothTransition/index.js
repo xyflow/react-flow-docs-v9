@@ -1,13 +1,8 @@
-import { Easing, Tween, autoPlay } from 'es6-tween';
+import { animate } from 'popmotion';
 import React, { useCallback, useState } from 'react';
 import ReactFlow, { addEdge, Background } from 'react-flow-renderer';
 
 import './transition.css';
-
-autoPlay(true);
-
-const TRANSITION_TIME = 300;
-const EASING = Easing.Quadratic.Out;
 
 const initialElements = [
   {
@@ -41,11 +36,11 @@ const SmoothTransition = () => {
     (ratio) => () => {
       const { zoom } = rfInstance.toObject();
 
-      new Tween({ zoom })
-        .to({ zoom: zoom * ratio }, TRANSITION_TIME)
-        .easing(EASING)
-        .on('update', ({ zoom }) => rfInstance.zoomTo(zoom))
-        .start();
+      animate({
+        from: zoom,
+        to: zoom * ratio,
+        onUpdate: (nextZoom) => rfInstance.zoomTo(nextZoom),
+      });
     },
     [rfInstance]
   );
@@ -57,13 +52,11 @@ const SmoothTransition = () => {
         zoom,
       } = rfInstance.toObject();
 
-      new Tween({ x: x, y: y, zoom })
-        .to(transform, TRANSITION_TIME)
-        .easing(EASING)
-        .on('update', ({ x, y, zoom }) =>
-          rfInstance.setTransform({ x, y, zoom })
-        )
-        .start();
+      animate({
+        from: { x: x, y: y, zoom },
+        to: transform,
+        onUpdate: ({ x, y, zoom }) => rfInstance.setTransform({ x, y, zoom }),
+      });
     },
     [rfInstance]
   );
@@ -74,9 +67,7 @@ const SmoothTransition = () => {
         <div className="controls">
           <button onClick={handleZoom(1.2)}>zoom in</button>
           <button onClick={handleZoom(1 / 1.2)}>zoom out</button>
-          <button onClick={handleTransform({ x: 0, y: 0, zoom: 1 })}>
-            pan to center(0,0,1)
-          </button>
+          <button onClick={handleTransform({ x: 0, y: 0, zoom: 1 })}>pan to center(0,0,1)</button>
         </div>
         <Background />
       </ReactFlow>
