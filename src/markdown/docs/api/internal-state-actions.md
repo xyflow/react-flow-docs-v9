@@ -46,4 +46,4 @@ const MinZoom = () => {
 });
 ```
 
-If you need more control you can wrap the `ReactFlow` component with the `ReactFlowProvider` component in order to be able to call `useStoreState` and `useStoreActions` outside of the `ReactFlow` component.
+If you need more control you can wrap the `ReactFlow` component with the [`ReactFlowProvider`](/docs/api/components/provider/) component in order to be able to call `useStoreState` and `useStoreActions` outside of the `ReactFlow` component.

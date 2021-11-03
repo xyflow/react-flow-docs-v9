@@ -19,3 +19,30 @@ const FlowWithProvider = () => (
 ```
 
 It is used in the [provider example](/examples/provider/).
+
+Note that if you are using the [bundle without styles](/docs/theming/), to correctly access internal state and actions you need to **import the provider and hooks from the same path**.
+
+```js
+import ReactFlow from 'react-flow-renderer/nocss'
+export const Flow = () => (
+  <ReactFlow
+    elements={elements}
+    onElementClick={onElementClick}
+    onConnect={onConnect}
+  />  
+)
+
+// separate page
+import { ReactFlowProvider, useStoreState, useStoreActions } from 'react-flow-renderer/nocss';
+import Sidebar from './Sidebar';
+
+export const Wrapper = () => {
+  const elements = useStoreState((state) => state.elements)
+  const setElements = useStoreActions((actions) => actions.setElements);
+  return (
+    <ReactFlowProvider>
+      <Flow/>
+      <Sidebar elements={elements} setElements={setElements}/>
+    </ReactFlowProvider> 
+}
+```
