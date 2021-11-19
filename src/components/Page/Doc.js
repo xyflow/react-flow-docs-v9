@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
+import Helmet from 'react-helmet';
 
 import Page from 'components/Page';
 import Sidebar from 'components/Sidebar';
@@ -16,11 +17,21 @@ const DocWrapper = styled(Box)`
   padding: 0 16px;
 `;
 
-export default ({ children, menu = [], ...rest }) => (
-  <Page {...rest} footerBorder>
-    <Wrapper>
-      <Sidebar menu={menu} isDocs />
-      <DocWrapper>{children}</DocWrapper>
-    </Wrapper>
-  </Page>
-);
+const metaTags = {
+  algolia: true,
+};
+
+export default ({ children, menu = [], ...rest }) => {
+  return (
+    <Page {...rest} footerBorder metaTags={metaTags}>
+      <Wrapper>
+        <Sidebar menu={menu} isDocs />
+        <DocWrapper>{children}</DocWrapper>
+      </Wrapper>
+      <Helmet>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
+        <script type="text/javascript" src="/docsearch.js"></script>
+      </Helmet>
+    </Page>
+  );
+};

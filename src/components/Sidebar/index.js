@@ -84,9 +84,7 @@ const MenuItem = ({ title, slug, marginLeft }) => {
 const SideBarParts = ({ items, level }) =>
   items.map((menuItem) => {
     if (menuItem.title) {
-      return (
-        <MenuItem key={menuItem.slug} marginLeft={level * 16} {...menuItem} />
-      );
+      return <MenuItem key={menuItem.slug} marginLeft={level * 16} {...menuItem} />;
     }
 
     return (
@@ -112,14 +110,10 @@ const Sidebar = ({ menu }) => {
   return (
     <>
       <MobileButton onClick={toggleSidebar}>
-        <Icon
-          name="menu"
-          width="24px"
-          colorizeStroke
-          strokeColor="silverLighten60"
-        />
+        <Icon name="menu" width="24px" colorizeStroke strokeColor="silverLighten60" />
       </MobileButton>
       <Aside isOpen={isOpen} height={menuHeight}>
+        <div id="docs" />
         <AsideInner>
           <SideBarParts items={menu} level={0} />
           <Close className="mobile" onClick={toggleSidebar} />

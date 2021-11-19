@@ -1,15 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const MetaTags = ({
-  title,
-  description,
-  siteUrl,
-  robots,
-  image,
-  pathname,
-  article,
-}) => {
+const MetaTags = ({ title, description, siteUrl, robots, image, pathname, article, algolia }) => {
   if (pathname) {
     siteUrl = `${siteUrl}${pathname}`;
   }
@@ -19,6 +11,8 @@ const MetaTags = ({
   } else {
     image = 'https://reactflow.dev/images/react-flow-header.jpg';
   }
+
+  const isProd = process.env.NODE_ENV === 'production';
 
   return (
     <Helmet defaultTitle="React Flow">
@@ -38,13 +32,9 @@ const MetaTags = ({
       {description && <meta name="twitter:description" content={description} />}
       {image && <meta name="twitter:image" content={image} />}
 
-      {process.env.NODE_ENV === 'production' && (
-        <script
-          src="https://cdn.usefathom.com/script.js"
-          site="LXMRMWLB"
-          defer
-        ></script>
-      )}
+      {isProd && <script src="https://cdn.usefathom.com/script.js" site="LXMRMWLB" defer></script>}
+
+      {!!algolia && <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@alpha" />}
     </Helmet>
   );
 };
