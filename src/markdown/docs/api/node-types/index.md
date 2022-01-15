@@ -58,7 +58,7 @@ A basic implementation of a custom node could look like this:
 
 ```jsx
 import React from 'react';
-import ReactFlow, { Handle } from 'react-flow-renderer';
+import ReactFlow, { Handle, Position } from 'react-flow-renderer';
 
 const elements = [
   {
@@ -78,17 +78,17 @@ const customNodeStyles = {
 const CustomNodeComponent = ({ data }) => {
   return (
     <div style={customNodeStyles}>
-      <Handle type="target" position="left" style={{ borderRadius: 0 }} />
+      <Handle type="target" position={Position.Left} style={{ borderRadius: 0 }} />
       <div>{data.text}</div>
       <Handle
         type="source"
-        position="right"
+        position={Position.Right}
         id="a"
         style={{ top: '30%', borderRadius: 0 }}
       />
       <Handle
         type="source"
-        position="right"
+        position={Position.Right}
         id="b"
         style={{ top: '70%', borderRadius: 0 }}
       />
