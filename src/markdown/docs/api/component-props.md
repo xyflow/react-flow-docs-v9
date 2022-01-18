@@ -89,7 +89,15 @@ import ReactFlow from 'react-flow-renderer';
 
 ### Connection Line Options
 
-- `connectionLineType`: connection line type = `default` (bezier), `straight`, `step`, `smoothstep`
+- `connectionLineType`: connection line type = `default` (bezier), `straight`, `step`, `smoothstep` 
+example usage
+```
+import {ConnectionLineType} from 'react-flow-renderer';
+<ReactFlow
+  connectionLineType={ConnectionLineType.Straight}
+  ...
+</ReactFlow>
+```
 - `connectionLineStyle`: connection style as svg attributes
 - `connectionLineComponent`: [custom connection line component](/examples/custom-connectionline/)
 
