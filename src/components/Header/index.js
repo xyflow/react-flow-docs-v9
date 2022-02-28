@@ -204,7 +204,7 @@ const Header = (props) => {
     <Wrapper>
       <DataBlocksAd>
         This is the legacy site for v9. If you are looking for the latest docs, please visit{' '}
-        <a src="https://reactflow.dev" target="_blank">
+        <a href="https://reactflow.dev" target="_blank">
           React Flow
         </a>
       </DataBlocksAd>
