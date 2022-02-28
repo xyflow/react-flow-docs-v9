@@ -181,6 +181,7 @@ const DataBlocksAd = styled(Box)`
   background: ${getThemeColor('silverLighten30')};
 
   a:hover {
+    cursor: pointer;
     color: ${getThemeColor('silverDarken75')};
   }
 `;
@@ -201,15 +202,13 @@ const Header = (props) => {
 
   return (
     <Wrapper>
-      {location.pathname === '/' && (
-        <DataBlocksAd>
-          Help us to make React Flow even better by{' '} 
-          <a href="https://github.com/sponsors/wbkd" target="_blank">
-            sponsoring our work
-          </a>
-          .
-        </DataBlocksAd>
-      )}
+      <DataBlocksAd>
+        This is the legacy site for v9. If you are looking for the latest docs, please visit{' '}
+        <a src="https://reactflow.dev" target="_blank">
+          React Flow
+        </a>
+      </DataBlocksAd>
+
       <Centered>
         <Flex as={Link} to="/">
           <Image src={ReactFlowLogo} alt="React Flow Logo" />
