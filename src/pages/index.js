@@ -20,12 +20,11 @@ import { baseColors } from 'themes';
 import { getThemeColor, device } from 'utils/css-utils';
 
 const metaTags = {
-  title:
-    'React Flow - An open source library for building node based applications.',
+  title: 'React Flow - An open source library for building node based applications.',
   description:
     'Highly customizable React.js library for building interactive node-based editors, flow charts and diagrams.',
   siteUrl: 'https://reactflow.dev',
-  robots: 'index,follow',
+  robots: 'noindex,nofollow',
 };
 
 const HeroWrapper = styled(Box)`
@@ -142,29 +141,15 @@ const Home = () => {
             <HeadlineWrapper>
               <H1>Wire your ideas with React Flow</H1>
               <SectionSubtitle>
-                Highly customizable React.js library for building node-based
-                editors and diagrams.
+                Highly customizable React.js library for building node-based editors and diagrams.
               </SectionSubtitle>
               <Flex mt={3} alignItems="center">
-                <DocsButton
-                  as={Link}
-                  to="/docs/"
-                  icon="code"
-                  colorizeStroke
-                  color="textInverted"
-                  type="big"
-                >
+                <DocsButton as={Link} to="/docs/" icon="code" colorizeStroke color="textInverted" type="big">
                   Documentation
                 </DocsButton>
                 <ExampleButton to="/examples/">
                   Examples
-                  <Icon
-                    width="40px"
-                    name="arrow_right"
-                    colorizeStroke
-                    strokeColor="text"
-                    ml={1}
-                  />
+                  <Icon width="40px" name="arrow_right" colorizeStroke strokeColor="text" ml={1} />
                 </ExampleButton>
               </Flex>
             </HeadlineWrapper>
@@ -182,23 +167,15 @@ const Home = () => {
           <GettingStartedWrapper>
             <Paragraph mb={3} color={baseColors.textLight}>
               React Flow is published on{' '}
-              <a
-                href="https://www.npmjs.com/package/react-flow-renderer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.npmjs.com/package/react-flow-renderer" target="_blank" rel="noopener noreferrer">
                 npm
               </a>
               . You can install it via:
             </Paragraph>
-            <CodeBlock
-              code={`npm install --save react-flow-renderer`}
-              language="bash"
-            />
+            <CodeBlock code={`npm install --save react-flow-renderer`} language="bash" />
             <Paragraph my={3} color={baseColors.textLight}>
-              A flow consists of nodes and edges (or just nodes). Together we
-              call them elements. You can pass a set of elements as a prop to
-              the ReactFlow component. A simple flow could look like this:
+              A flow consists of nodes and edges (or just nodes). Together we call them elements. You can pass a set of
+              elements as a prop to the ReactFlow component. A simple flow could look like this:
             </Paragraph>
             <CodeBlock
               code={`import React from 'react';
@@ -214,9 +191,7 @@ const elements = [
 export default () => <ReactFlow elements={elements} />;`}
             />
             <Paragraph mt={3} color={baseColors.textLight}>
-              You can find a detailed{' '}
-              <Link to="/docs/getting-started/">entry point</Link> in the docs
-              or read our{' '}
+              You can find a detailed <Link to="/docs/getting-started/">entry point</Link> in the docs or read our{' '}
               <a
                 href="https://webkid.io/blog/react-flow-node-based-graph-library/"
                 target="_blank"
@@ -255,31 +230,17 @@ export default () => <ReactFlow elements={elements} />;`}
           />
 
           <Flex justifyContent="center" mt={-2}>
-            <ContactButton
-              as="a"
-              href="https://webkid.io/contact"
-              icon="mail"
-              type="big"
-              color="textInverted"
-            >
+            <ContactButton as="a" href="https://webkid.io/contact" icon="mail" type="big" color="textInverted">
               Contact us
             </ContactButton>
-            <WorkButton
-              as="a"
-              href="https://webkid.io/portfolio"
-              icon="eye"
-              type="big"
-              color="textInverted"
-            >
+            <WorkButton as="a" href="https://webkid.io/portfolio" icon="eye" type="big" color="textInverted">
               View other work
             </WorkButton>
           </Flex>
 
           <Box mt={5} css={{ textAlign: 'center' }}>
             If you are using react flow for a commercial project we would really{' '}
-            <a href="https://github.com/sponsors/wbkd">
-              appreciate a sponsorship
-            </a>
+            <a href="https://github.com/sponsors/wbkd">appreciate a sponsorship</a>
           </Box>
         </CenterContent>
       </ContentSection>

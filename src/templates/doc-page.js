@@ -19,31 +19,18 @@ const docsMenu = [
       { title: 'Helper Functions' },
       {
         group: 'Nodes',
-        items: [
-          { title: 'Node Options' },
-          { title: 'Node Types & Custom Nodes' },
-          { title: 'Handle Component' },
-        ],
+        items: [{ title: 'Node Options' }, { title: 'Node Types & Custom Nodes' }, { title: 'Handle Component' }],
       },
       {
         group: 'Edges',
-        items: [
-          { title: 'Edge Options' },
-          { title: 'Edge Types & Custom Edges' },
-          { title: 'Edge Utils' },
-        ],
+        items: [{ title: 'Edge Options' }, { title: 'Edge Types & Custom Edges' }, { title: 'Edge Utils' }],
       },
       { title: 'Instance' },
       { title: 'Internal State and Actions' },
       { title: 'Hooks' },
       {
         group: 'Components',
-        items: [
-          { title: 'Background' },
-          { title: 'Mini Map' },
-          { title: 'Controls' },
-          { title: 'Provider' },
-        ],
+        items: [{ title: 'Background' }, { title: 'Mini Map' }, { title: 'Controls' }, { title: 'Provider' }],
       },
     ],
   },
@@ -85,8 +72,7 @@ function extendMenu(items, menuData) {
       return extendMenu(menuItem.items, menuData);
     }
 
-    menuItem.slug =
-      menuData.find((m) => (m.id || m.title) === menuItem.title)?.slug || '/';
+    menuItem.slug = menuData.find((m) => (m.id || m.title) === menuItem.title)?.slug || '/';
   });
 }
 
@@ -98,7 +84,7 @@ const DocPageTemplate = ({ data, pageContext }) => {
     title: `React Flow - ${title} Docs`,
     description: content.excerpt,
     siteUrl: `https://reactflow.dev${content.fields.slug}`,
-    robots: 'index, follow',
+    robots: 'noindex, nofollow',
   };
 
   extendMenu(docsMenu, pageContext.menu);

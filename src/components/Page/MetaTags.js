@@ -1,15 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const MetaTags = ({
-  title,
-  description,
-  siteUrl,
-  robots,
-  image,
-  pathname,
-  article,
-}) => {
+const MetaTags = ({ title, description, siteUrl, robots, image, pathname, article }) => {
   if (pathname) {
     siteUrl = `${siteUrl}${pathname}`;
   }
@@ -25,7 +17,7 @@ const MetaTags = ({
       <html lang="en" />
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
-      {description && <meta name="robots" content={robots} />}
+      {description && <meta name="robots" content="noindex, nofollow" />}
 
       {siteUrl && <meta property="og:url" content={siteUrl} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
@@ -39,11 +31,7 @@ const MetaTags = ({
       {image && <meta name="twitter:image" content={image} />}
 
       {process.env.NODE_ENV === 'production' && (
-        <script
-          src="https://cdn.usefathom.com/script.js"
-          site="LXMRMWLB"
-          defer
-        ></script>
+        <script src="https://cdn.usefathom.com/script.js" site="YAHSIHIX" defer></script>
       )}
     </Helmet>
   );

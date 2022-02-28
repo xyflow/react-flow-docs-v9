@@ -46,7 +46,7 @@ export default ({ children, title, slug, description, sourceCodeFiles = [] }) =>
   const metaTags = {
     title: `React Flow - ${title} Example`,
     siteUrl: `https://reactflow.dev/examples/${slug}`,
-    robots: 'index, follow',
+    robots: 'noindex, nofollow',
   };
 
   const hasSource = sourceCodeFiles.length > 0;
