@@ -1,4 +1,4 @@
-# react-flow-docs
+# react-flow-docs-v9
 
 #### ⚠️ These are the old docs for React Flow v9. For the up-to-date documentation, please refer to: [wbkd/react-flow-docs](https://github.com/wbkd/react-flow-docs) ⚠️
 
